@@ -47,6 +47,9 @@
   .card .company { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); font-weight:700; }
   .card h2 { font-size:1.02rem; line-height:1.35; }
   .card .loc { color:var(--muted); font-size:.87rem; }
+  .card .postedline { font-size:.85rem; color:var(--text); background:rgba(255,180,84,.08); border:1px solid #5c441a; border-radius:8px; padding:.45rem .65rem; }
+  .card .postedline b { color:var(--amber); }
+  .card .postedline small { display:block; color:var(--muted); font-size:.72rem; margin-top:.1rem; }
   .card .fit { font-size:.82rem; color:var(--muted); border-left:2px solid var(--accent); padding-left:.55rem; }
   .card .fit b { color:var(--text); font-weight:600; }
   .card .tags { display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.15rem; }
@@ -143,6 +146,14 @@ function fmtPosted(iso){
   return MONTHS[d.getMonth()] + ' ' + d.getDate() + ' (' + rel + ')';
 }
 
+function fmtPostedLong(iso){
+  if (!iso) return null;
+  const d = new Date(iso);
+  const days = Math.floor((Date.now() - d.getTime()) / 86400000);
+  const rel = days <= 0 ? 'today' : days === 1 ? '1 day ago' : days + ' days ago';
+  return MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' (' + rel + ')';
+}
+
 function parseLoc(loc){
   const remote = /remote/i.test(loc);
   const states = new Set(), cities = new Set();
@@ -210,12 +221,12 @@ function render(){
     const expTag = j.exp === 'junior2'
       ? '<span class="tag exp-junior">≤2 yrs exp</span>'
       : '<span class="tag exp-entry">Entry-level</span>';
-    const postedTxt = fmtPosted(j.posted_at);
+    const postedTxt = fmtPostedLong(j.posted_at);
     el.innerHTML =
       '<div class="company"></div><h2></h2><div class="loc"></div>' +
+      (postedTxt ? '<div class="postedline">📅 <b>Posted:</b> ' + postedTxt + '<small>Date confirmed from the employer\'s hiring system (' + (j.date_source || 'ATS timestamp') + ') — not a guess.</small></div>' : '') +
       (j.fit ? '<div class="fit"><b>Why it fits:</b> <span></span></div>' : '') +
-      '<div class="tags"><span class="tag verified">✓ verified ' + (j.verified||'') + '</span>' +
-      (postedTxt ? '<span class="tag posted" title="Source: ' + (j.date_source||'ATS') + '">📅 Posted ' + postedTxt + '</span>' : '') +
+      '<div class="tags"><span class="tag verified" title="The day this link was checked and confirmed working — not the posting date.">✓ link verified ' + (j.verified||'') + '</span>' +
       expTag + '</div>' +
       '<div class="foot"><span class="posted"></span><span class="btns">' +
       '<a class="btn posting" target="_blank" rel="noopener">📄 Job posting</a>' +
