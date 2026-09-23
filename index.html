@@ -72,6 +72,50 @@
 </style>
 </head>
 <body>
+<!-- META-SHARED-NAV v1 : back button + hamburger linking all Meta apps.
+     Paste this block into every page (right after <body> is best). The
+     META-SHARED-NAV marker lets future updates find/replace it. -->
+<div id="meta-nav">
+  <button id="meta-back" title="Back to previous page" aria-label="Back">&#8592;</button>
+  <button id="meta-burger" title="All Meta tools" aria-label="All Meta tools">&#9776;</button>
+  <div id="meta-menu" hidden>
+    <div class="meta-menu-title">Meta tools</div>
+    <a href="https://aimarketmuse.vercel.app" data-app="aimarketmuse">&#x1F4C8; Stock Pick vs SPY</a>
+    <a href="https://leveraged-etf-radar.vercel.app/" data-app="etf-radar">&#x26A1; Leveraged ETF Radar</a>
+    <a href="https://ai-portfolio-research-qb1hnui9x-js-projects-bb600cf6.vercel.app" data-app="ai-portfolio">&#x1F9E0; AI Portfolio Research</a>
+    <a href="https://sp1500-valuations.vercel.app" data-app="sp1500">&#x1F4CA; S&amp;P 1500 Valuations</a>
+    <a href="https://fresh-grad-jobs.vercel.app" data-app="jobs">&#x1F4BC; Fresh Grad Job Board</a>
+    <a href="https://pac-arena-rho.vercel.app/" data-app="pacarena">&#x1F579;&#xFE0F; Pac Arena</a>
+  </div>
+</div>
+<style>
+#meta-nav{position:fixed;top:10px;left:10px;z-index:99999;display:flex;gap:6px;align-items:flex-start;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#meta-nav button{width:38px;height:38px;border-radius:10px;border:1px solid rgba(128,128,128,.35);background:rgba(20,20,24,.78);color:#fff;font-size:18px;line-height:1;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:0}
+#meta-nav button:hover{background:rgba(50,50,58,.9)}
+#meta-menu{position:absolute;top:44px;left:0;min-width:240px;background:rgba(18,18,22,.96);border:1px solid rgba(128,128,128,.35);border-radius:12px;padding:6px;box-shadow:0 8px 28px rgba(0,0,0,.45)}
+#meta-menu .meta-menu-title{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#9a9aa5;padding:8px 10px 4px}
+#meta-menu a{display:flex;align-items:center;gap:10px;color:#f2f2f5;text-decoration:none;font-size:14px;padding:9px 10px;border-radius:8px;white-space:nowrap}
+#meta-menu a:hover{background:rgba(255,255,255,.1)}
+#meta-menu a.meta-current{background:rgba(90,140,255,.22);color:#fff;pointer-events:none}
+#meta-menu a.meta-current::after{content:"\2022 you are here";margin-left:auto;font-size:11px;color:#9a9aa5}
+</style>
+<script>
+(function(){
+  var nav=document.getElementById('meta-nav'); if(!nav||nav.dataset.done)return; nav.dataset.done="1";
+  var back=document.getElementById('meta-back'), burger=document.getElementById('meta-burger'), menu=document.getElementById('meta-menu');
+  back.addEventListener('click',function(){ history.back(); });
+  function closeMenu(){ menu.hidden=true; }
+  burger.addEventListener('click',function(e){ e.stopPropagation(); menu.hidden=!menu.hidden; });
+  document.addEventListener('click',function(e){ if(!nav.contains(e.target)) closeMenu(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeMenu(); });
+  var here=location.hostname+location.pathname;
+  menu.querySelectorAll('a[data-app]').forEach(function(a){
+    var u=a.getAttribute('href').replace(/^https?:\/\//,'').replace(/\/$/,'');
+    if(here.indexOf(u)===0){ a.classList.add('meta-current'); }
+  });
+})();
+</script>
+
 <div id="scrim"></div>
 <aside id="drawer" aria-label="Listings menu">
   <div class="dhead"><b>☰ Listings</b><button id="drawer-close" aria-label="Close menu">✕</button></div>
