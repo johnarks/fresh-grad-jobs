@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Grad Jobs — Posted in the Last 5 Days</title>
+<style>
+  :root { --bg:#0e1116; --card:#171c24; --border:#262d38; --text:#e8ecf1; --muted:#9aa4b2; --accent:#4da3ff; --green:#3ddc84; --amber:#ffb454; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+  header { padding:2.5rem 1.25rem 1.5rem; max-width:1100px; margin:0 auto; position:relative; }
+  .topbar { display:flex; align-items:center; gap:.9rem; }
+  #menu-btn { background:var(--card); border:1px solid var(--border); color:var(--text); border-radius:10px; font-size:1.25rem; padding:.4rem .75rem; cursor:pointer; line-height:1; }
+  #menu-btn:hover { border-color:var(--accent); }
+  header h1 { font-size:1.9rem; letter-spacing:-0.5px; }
+  header h1 span { color:var(--green); }
+  header p { color:var(--muted); margin-top:.5rem; max-width:720px; }
+  .meta { display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem; }
+  .pill { background:var(--card); border:1px solid var(--border); border-radius:999px; padding:.3rem .85rem; font-size:.82rem; color:var(--muted); }
+  .pill b { color:var(--text); }
+  .pill .ok { color:var(--green); font-weight:600; }
+  .how { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:.9rem 1.1rem; margin:1.2rem 0 0; font-size:.83rem; color:var(--muted); max-width:720px; }
+  .how b { color:var(--text); }
+  #scrim { position:fixed; inset:0; background:rgba(0,0,0,.55); opacity:0; pointer-events:none; transition:opacity .2s; z-index:40; }
+  #scrim.open { opacity:1; pointer-events:auto; }
+  #drawer { position:fixed; top:0; left:0; bottom:0; width:300px; max-width:85vw; background:#12161d; border-right:1px solid var(--border); z-index:50; transform:translateX(-105%); transition:transform .22s ease; display:flex; flex-direction:column; }
+  #drawer.open { transform:translateX(0); }
+  #drawer .dhead { padding:1.1rem 1.2rem; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; }
+  #drawer .dhead b { font-size:1rem; }
+  #drawer .dhead button { background:none; border:0; color:var(--muted); font-size:1.3rem; cursor:pointer; }
+  #drawer nav { padding:.6rem; display:flex; flex-direction:column; gap:.3rem; overflow-y:auto; }
+  #drawer nav button { background:none; border:1px solid transparent; color:var(--text); text-align:left; padding:.75rem .9rem; border-radius:10px; font-size:.95rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:.5rem; }
+  #drawer nav button:hover { background:var(--card); }
+  #drawer nav button.active { background:var(--card); border-color:var(--accent); }
+  #drawer nav button .n { font-size:.78rem; color:var(--muted); background:var(--bg); border:1px solid var(--border); border-radius:999px; padding:.1rem .55rem; }
+  #drawer .dfoot { margin-top:auto; padding:1rem 1.2rem; border-top:1px solid var(--border); color:var(--muted); font-size:.78rem; }
+  .controls { max-width:1100px; margin:0 auto; padding:0 1.25rem 1rem; display:flex; gap:.6rem; flex-wrap:wrap; align-items:center; }
+  .controls input, .controls select { background:var(--card); border:1px solid var(--border); color:var(--text); border-radius:10px; padding:.6rem .8rem; font-size:.9rem; }
+  .controls input { flex:1 1 240px; }
+  .seg { display:flex; background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  .seg button { background:transparent; border:0; color:var(--muted); padding:.6rem .9rem; font-size:.88rem; cursor:pointer; }
+  .seg button.active { background:var(--accent); color:#06121f; font-weight:700; }
+  .tabname { max-width:1100px; margin:0 auto; padding:0 1.25rem .6rem; color:var(--muted); font-size:.85rem; }
+  .tabname b { color:var(--text); }
+  .grid { max-width:1100px; margin:0 auto; padding:0 1.25rem 3rem; display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:1rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:1.1rem 1.15rem; display:flex; flex-direction:column; gap:.45rem; }
+  .card .company { font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); font-weight:700; }
+  .card h2 { font-size:1.02rem; line-height:1.35; }
+  .card .loc { color:var(--muted); font-size:.87rem; }
+  .card .fit { font-size:.82rem; color:var(--muted); border-left:2px solid var(--accent); padding-left:.55rem; }
+  .card .fit b { color:var(--text); font-weight:600; }
+  .card .tags { display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.15rem; }
+  .tag { font-size:.72rem; border:1px solid var(--border); border-radius:6px; padding:.12rem .5rem; color:var(--muted); }
+  .tag.verified { color:var(--green); border-color:#1f4d33; }
+  .tag.posted { color:var(--amber); border-color:#5c441a; }
+  .tag.exp-entry { color:var(--green); border-color:#1f4d33; }
+  .tag.exp-junior { color:var(--accent); border-color:#234a75; }
+  .card .foot { margin-top:auto; padding-top:.7rem; display:flex; align-items:center; justify-content:space-between; gap:.6rem; flex-wrap:wrap; }
+  .posted { color:var(--muted); font-size:.76rem; }
+  .btns { display:flex; gap:.5rem; }
+  .btn { text-decoration:none; padding:.5rem 1rem; border-radius:9px; font-size:.86rem; font-weight:600; }
+  .btn.posting { background:transparent; border:1px solid var(--accent); color:var(--accent); }
+  .btn.posting:hover { background:rgba(77,163,255,.12); }
+  .btn.apply { background:var(--accent); color:#06121f; }
+  .btn.apply:hover { filter:brightness(1.1); }
+  footer { max-width:1100px; margin:0 auto; padding:0 1.25rem 2.5rem; color:var(--muted); font-size:.8rem; }
+  .empty { grid-column:1/-1; text-align:center; color:var(--muted); padding:3rem 1rem; }
+  @media (max-width:560px){ header h1{font-size:1.5rem;} }
+</style>
+</head>
+<body>
+<div id="scrim"></div>
+<aside id="drawer" aria-label="Listings menu">
+  <div class="dhead"><b>☰ Listings</b><button id="drawer-close" aria-label="Close menu">✕</button></div>
+  <nav id="drawer-nav">
+    <button data-tab="all"><span>All fresh roles</span><span class="n" id="n-all">–</span></button>
+    <button data-tab="entry"><span>🎓 Entry-level <small style="color:var(--muted)">(0–1 yr)</small></span><span class="n" id="n-entry">–</span></button>
+    <button data-tab="junior2"><span>📈 Up to 2 yrs experience</span><span class="n" id="n-junior2">–</span></button>
+  </nav>
+  <div class="dfoot">Only roles posted/updated in the last 5 days, with the date confirmed from the employer's hiring-system timestamp.</div>
+</aside>
+
+<header>
+  <div class="topbar">
+    <button id="menu-btn" aria-label="Open menu">☰</button>
+    <h1>🆕 Fresh Grad Jobs <span>— last 5 days</span></h1>
+  </div>
+  <p>Entry-level and junior (≤2 yrs) software roles for 2026 CS graduates — every listing here was <b>posted or updated within the last 5 days</b> and date-confirmed from the employer's own hiring system. Click <b>📄 Job posting</b> to read the full description before you apply.</p>
+  <div class="meta">
+    <div class="pill"><b id="count">–</b> verified fresh roles</div>
+    <div class="pill">Window: <b>Sep 18 – Sep 23, 2026</b></div>
+    <div class="pill"><span class="ok">✓</span> dates confirmed from ATS timestamps</div>
+  </div>
+  <div class="how">
+    <b>How dates are confirmed:</b> each card shows the real posted timestamp pulled from the employer's hiring platform (Greenhouse, Lever, or Ashby API) — not a guess. Roles on platforms that hide posting dates (Workday, iCIMS, etc.) can't be date-verified and are excluded from this board entirely.
+  </div>
+</header>
+<div class="tabname" id="tabname"></div>
+<div class="controls">
+  <input id="q" type="search" placeholder="Search company or role…">
+  <div class="seg" id="type-seg">
+    <button data-v="all" class="active">All</button>
+    <button data-v="onsite">On-site / Hybrid</button>
+    <button data-v="remote">Remote only</button>
+  </div>
+  <select id="state" title="Filter by state">
+    <option value="">All states</option>
+    <option value="NY" selected>New York</option>
+    <option value="NJ">New Jersey</option>
+    <option value="CT">Connecticut</option>
+  </select>
+  <select id="city" title="Filter by city">
+    <option value="">All cities</option>
+  </select>
+  <select id="sort">
+    <option value="newest">Newest first</option>
+    <option value="company">Company A–Z</option>
+  </select>
+</div>
+<main class="grid" id="grid"></main>
+<footer>
+  Fresh-postings board for 2026 CS graduates. Posting dates come from the employer's hiring-system API; always confirm details on the employer's posting before applying. Not affiliated with any employer listed.
+</footer>
+<script>
+let JOBS = [];
+let tab = 'all';
+const grid = document.getElementById('grid');
+const q = document.getElementById('q'), stateSel = document.getElementById('state'),
+      citySel = document.getElementById('city'), sort = document.getElementById('sort'),
+      seg = document.getElementById('type-seg');
+let workType = 'all';
+
+const CITY_ALIAS = { 'NYC':'New York City', 'New York':'New York City', 'SF':'San Francisco', 'LA':'Los Angeles' };
+const TRISTATE = new Set(['NY','NJ','CT']);
+const TAB_LABELS = { all:'All fresh roles', entry:'🎓 Entry-level (0–1 yr)', junior2:'📈 Up to 2 yrs experience' };
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function fmtPosted(iso){
+  if (!iso) return null;
+  const d = new Date(iso);
+  const days = Math.floor((Date.now() - d.getTime()) / 86400000);
+  const rel = days <= 0 ? 'today' : days === 1 ? '1 day ago' : days + ' days ago';
+  return MONTHS[d.getMonth()] + ' ' + d.getDate() + ' (' + rel + ')';
+}
+
+function parseLoc(loc){
+  const remote = /remote/i.test(loc);
+  const states = new Set(), cities = new Set();
+  const re = /([A-Za-z][A-Za-z .'\-]*?),\s*([A-Z]{2})\b/g;
+  let m;
+  while ((m = re.exec(loc)) !== null){
+    let city = m[1].replace(/^remote\s*-\s*/i,'').trim();
+    const st = m[2];
+    if (/^remote$/i.test(city)) continue;
+    city = CITY_ALIAS[city] || city;
+    states.add(st);
+    if (TRISTATE.has(st)) cities.add(city);
+  }
+  for (const [name, abbr] of [['New York','NY'],['New Jersey','NJ'],['Connecticut','CT']]){
+    if (new RegExp('\\b'+name+'\\b','i').test(loc)) states.add(abbr);
+  }
+  if (/\bNYC\b/.test(loc)){ states.add('NY'); cities.add('New York City'); }
+  if (/HQ:\s*New York,?\s*NY/i.test(loc)){ states.add('NY'); cities.add('New York City'); }
+  return { remote, states:[...states], cities:[...cities] };
+}
+
+function buildCityOptions(){
+  const st = stateSel.value;
+  const set = new Set();
+  for (const j of JOBS){
+    if (tab !== 'all' && j.exp !== tab) continue;
+    const p = j._p;
+    if (st && p.states.length && !p.states.includes(st)) continue;
+    for (const c of p.cities) set.add(c);
+  }
+  const cur = citySel.value;
+  citySel.innerHTML = '<option value="">All cities</option>' +
+    [...set].sort().map(c => '<option value="'+c+'">'+c+'</option>').join('');
+  if ([...set].includes(cur)) citySel.value = cur;
+}
+
+function updateCounts(){
+  const n = t => t==='all' ? JOBS.length : JOBS.filter(j => j.exp===t).length;
+  document.getElementById('n-all').textContent = n('all');
+  document.getElementById('n-entry').textContent = n('entry');
+  document.getElementById('n-junior2').textContent = n('junior2');
+}
+
+function render(){
+  const term = q.value.trim().toLowerCase();
+  const st = stateSel.value, city = citySel.value;
+  let list = JOBS.filter(j => {
+    if (tab !== 'all' && j.exp !== tab) return false;
+    const p = j._p;
+    if (term && !(j.company+' '+j.role).toLowerCase().includes(term)) return false;
+    if (workType === 'remote' && !p.remote) return false;
+    if (workType === 'onsite' && p.remote) return false;
+    if (st && p.states.length && !p.states.includes(st)) return false;
+    if (city && !p.cities.includes(city)) return false;
+    return true;
+  });
+  list.sort((a,b) => sort.value==='company' ? a.company.localeCompare(b.company) : (b.posted_at||'').localeCompare(a.posted_at||''));
+  document.getElementById('count').textContent = list.length;
+  document.getElementById('tabname').innerHTML = 'Viewing: <b>' + TAB_LABELS[tab] + '</b>';
+  grid.innerHTML = list.length ? '' : '<div class="empty">No fresh roles match your filters.</div>';
+  for (const j of list){
+    const el = document.createElement('div');
+    el.className = 'card';
+    const postingUrl = j.posting_url || j.url;
+    const expTag = j.exp === 'junior2'
+      ? '<span class="tag exp-junior">≤2 yrs exp</span>'
+      : '<span class="tag exp-entry">Entry-level</span>';
+    const postedTxt = fmtPosted(j.posted_at);
+    el.innerHTML =
+      '<div class="company"></div><h2></h2><div class="loc"></div>' +
+      (j.fit ? '<div class="fit"><b>Why it fits:</b> <span></span></div>' : '') +
+      '<div class="tags"><span class="tag verified">✓ verified ' + (j.verified||'') + '</span>' +
+      (postedTxt ? '<span class="tag posted" title="Source: ' + (j.date_source||'ATS') + '">📅 Posted ' + postedTxt + '</span>' : '') +
+      expTag + '</div>' +
+      '<div class="foot"><span class="posted"></span><span class="btns">' +
+      '<a class="btn posting" target="_blank" rel="noopener">📄 Job posting</a>' +
+      '<a class="btn apply" target="_blank" rel="noopener">Apply →</a></span></div>';
+    el.querySelector('.company').textContent = j.company;
+    el.querySelector('h2').textContent = j.role;
+    el.querySelector('.loc').textContent = '📍 ' + j.location;
+    if (j.fit) el.querySelector('.fit span').textContent = j.fit;
+    el.querySelector('.posted').textContent = j.date_source ? 'Date source: ' + j.date_source : '';
+    el.querySelector('.btn.posting').href = postingUrl;
+    el.querySelector('.btn.apply').href = j.url;
+    grid.appendChild(el);
+  }
+}
+
+function setTab(t){
+  tab = t;
+  document.querySelectorAll('#drawer-nav button').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
+  buildCityOptions();
+  render();
+  closeDrawer();
+}
+
+const drawer = document.getElementById('drawer'), scrim = document.getElementById('scrim');
+function openDrawer(){ drawer.classList.add('open'); scrim.classList.add('open'); }
+function closeDrawer(){ drawer.classList.remove('open'); scrim.classList.remove('open'); }
+document.getElementById('menu-btn').addEventListener('click', openDrawer);
+document.getElementById('drawer-close').addEventListener('click', closeDrawer);
+scrim.addEventListener('click', closeDrawer);
+document.querySelectorAll('#drawer-nav button').forEach(b => b.addEventListener('click', () => setTab(b.dataset.tab)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+q.addEventListener('input', render);
+stateSel.addEventListener('change', () => { buildCityOptions(); render(); });
+citySel.addEventListener('change', render);
+sort.addEventListener('change', render);
+seg.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+  seg.querySelectorAll('button').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  workType = b.dataset.v;
+  render();
+}));
+
+fetch('jobs.json').then(r => r.json()).then(d => {
+  JOBS = d.jobs.map(j => ({ exp:'entry', ...j, _p: parseLoc(j.location) }));
+  updateCounts();
+  setTab('all');
+});
+</script>
+</body>
+</html>
