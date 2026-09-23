@@ -1,0 +1,46 @@
+{
+  "verified": "Sep 23, 2026",
+  "window": "2026-09-18 to 2026-09-23",
+  "count": 3,
+  "jobs": [
+    {
+      "company": "Garner Health",
+      "date_source": "greenhouse updated_at",
+      "exp": "junior2",
+      "fit": "Technical data-integrations role (feed automation, data analysis, error-reporting, file transformation/mapping) matching his Python/SQL/data-analysis skills, 0 years of experience explicitly acceptable.",
+      "location": "Remote (HQ: New York, NY)",
+      "posted": "2026-09-22",
+      "posted_at": "2026-09-22T12:51:40-04:00",
+      "posting_url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6112552004",
+      "role": "Feed Integrations Associate",
+      "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6112552004",
+      "verified": "Sep 23, 2026"
+    },
+    {
+      "company": "FiscalNote",
+      "role": "Associate Software Engineer",
+      "location": "United States - Remote",
+      "url": "https://jobs.lever.co/fiscalnote/c76e748f-6e25-42cf-bf26-ebae44280ffd",
+      "posting_url": "https://jobs.lever.co/fiscalnote/c76e748f-6e25-42cf-bf26-ebae44280ffd",
+      "posted": "2026-09-21",
+      "posted_at": "2026-09-21T15:10:40.385-04:00",
+      "date_source": "lever createdAt",
+      "verified": "Sep 23, 2026",
+      "exp": "entry",
+      "fit": "Associate-level full-stack web role (frontend UX plus backend APIs and production servers) on the Fireside R&D team; fits a React/TypeScript plus Python web background."
+    },
+    {
+      "company": "Authentic Insurance",
+      "role": "New Grad Software Engineer",
+      "location": "New York, New York, United States",
+      "url": "https://job-boards.greenhouse.io/authenticinsurance/jobs/4114318009",
+      "posting_url": "https://job-boards.greenhouse.io/authenticinsurance/jobs/4114318009",
+      "posted": "2026-09-22",
+      "posted_at": "2026-09-22T10:20:36-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 23, 2026",
+      "exp": "entry",
+      "fit": "New-grad full-stack role building a React frontend and Python/FastAPI backend at a NYC insurtech; near-exact stack match (React, Python, FastAPI, PostgreSQL, AWS)."
+    }
+  ]
+}
