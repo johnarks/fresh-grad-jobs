@@ -1,7 +1,7 @@
 {
+  "count": 9,
   "verified": "Sep 23, 2026",
   "window": "2026-09-18 to 2026-09-23",
-  "count": 3,
   "jobs": [
     {
       "company": "Garner Health",
@@ -41,6 +41,84 @@
       "verified": "Sep 23, 2026",
       "exp": "entry",
       "fit": "New-grad full-stack role building a React frontend and Python/FastAPI backend at a NYC insurtech; near-exact stack match (React, Python, FastAPI, PostgreSQL, AWS)."
+    },
+    {
+      "company": "DoorDash",
+      "role": "Software Engineer I, Entry-Level (Graduation Date: Fall 2026-Summer 2027) - US",
+      "location": "Los Angeles, CA; New York, NY; San Francisco, CA; Sunnyvale, CA; Seattle, WA",
+      "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
+      "posting_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
+      "posted": "2026-09-22",
+      "posted_at": "2026-09-22T17:13:29-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 23, 2026",
+      "exp": "entry",
+      "fit": "Targets 2027 grads (Fall 2026-Summer 2027 graduation dates); NYC is a listed location. Classic entry-level SWE I pipeline (Python/Java/Kotlin) \u2014 fits his backend and API background."
+    },
+    {
+      "company": "Marshall Wace",
+      "role": "Quant Developer - Quant Associate Programme - 2027",
+      "location": "London, New York",
+      "url": "https://job-boards.greenhouse.io/mw-tech-grad/jobs/8646947002",
+      "posting_url": "https://job-boards.greenhouse.io/mw-tech-grad/jobs/8646947002",
+      "posted": "2026-09-18",
+      "posted_at": "2026-09-18T04:22:53-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 23, 2026",
+      "exp": "entry",
+      "fit": "Targets 2027 grads (start flexible Jan-Sep 2027); NYC-listed graduate programme. Reach: quant-dev at a hedge fund expects elite C++/algorithms numeracy; his C++ TA background is the closest hook."
+    },
+    {
+      "company": "SingleStore",
+      "role": "Software Engineer-Engine-New Grad 2027",
+      "location": "United States",
+      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8205427",
+      "posting_url": "https://job-boards.greenhouse.io/singlestore/jobs/8205427",
+      "posted": "2026-09-22",
+      "posted_at": "2026-09-22T18:36:55-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 23, 2026",
+      "exp": "entry",
+      "fit": "Targets 2027 new grads; US-remote eligible. New-grad pipeline at a distributed-SQL database company."
+    },
+    {
+      "company": "SingleStore",
+      "role": "Software Engineer-Helios-New Grad 2027",
+      "location": "United States",
+      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8205389",
+      "posting_url": "https://job-boards.greenhouse.io/singlestore/jobs/8205389",
+      "posted": "2026-09-22",
+      "posted_at": "2026-09-22T18:37:49-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 23, 2026",
+      "exp": "entry",
+      "fit": "Targets 2027 new grads; US-remote eligible. Helios (managed cloud) team \u2014 closer to his cloud/API background."
+    },
+    {
+      "company": "SingleStore",
+      "role": "MIT-Software Engineer-New Grad |Engine|",
+      "location": "United States",
+      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8220863",
+      "posting_url": "https://job-boards.greenhouse.io/singlestore/jobs/8220863",
+      "posted": "2026-09-22",
+      "posted_at": "2026-09-22T18:38:45-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 23, 2026",
+      "exp": "entry",
+      "fit": "New-grad role refreshed Sep 22 (also on the main board); US-remote eligible. Database engine team."
+    },
+    {
+      "company": "SingleStore",
+      "role": "MIT-Software Engineer-New Grad |Helios|",
+      "location": "United States",
+      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8220882",
+      "posting_url": "https://job-boards.greenhouse.io/singlestore/jobs/8220882",
+      "posted": "2026-09-22",
+      "posted_at": "2026-09-22T18:39:44-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 23, 2026",
+      "exp": "entry",
+      "fit": "New-grad role refreshed Sep 22 (also on the main board); US-remote eligible. Helios (managed cloud) team."
     }
   ]
 }
