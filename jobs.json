@@ -1,5 +1,5 @@
 {
-  "count": 9,
+  "count": 10,
   "verified": "Sep 23, 2026",
   "window": "2026-09-18 to 2026-09-23",
   "jobs": [
@@ -119,6 +119,19 @@
       "verified": "Sep 23, 2026",
       "exp": "entry",
       "fit": ""
+    },
+    {
+      "company": "Marshall Wace",
+      "role": "Quant Developer - Quant Associate Programme - 2027",
+      "location": "London, New York",
+      "url": "https://job-boards.greenhouse.io/mw-tech-grad/jobs/8646947002",
+      "posting_url": "https://job-boards.greenhouse.io/mw-tech-grad/jobs/8646947002",
+      "posted": "2026-09-18",
+      "posted_at": "2026-09-18T04:22:53-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 23, 2026",
+      "exp": "entry",
+      "fit": "Targets 2027 grads (start flexible Jan-Sep 2027); NYC-listed graduate programme. Reach: quant-dev at a hedge fund expects elite C++/algorithms numeracy; his C++ TA background is the closest hook."
     }
   ]
 }
