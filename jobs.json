@@ -1,5 +1,5 @@
 {
-  "count": 10,
+  "count": 11,
   "verified": "Sep 24, 2026",
   "window": "2026-09-19 to 2026-09-24",
   "jobs": [
@@ -132,6 +132,20 @@
       "verified": "Sep 23, 2026",
       "exp": "entry",
       "fit": ""
+    },
+    {
+      "company": "Eulerity",
+      "role": "Associate Backend Engineer",
+      "location": "New York, New York",
+      "url": "https://job-boards.greenhouse.io/eulerity/jobs/4709039006",
+      "posting_url": "https://job-boards.greenhouse.io/eulerity/jobs/4709039006",
+      "posted": "2026-09-23",
+      "posted_at": "2026-09-23T16:28:56-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 24, 2026",
+      "exp": "junior2",
+      "fit": "Junior backend role (1\u20133 yrs, at least 1 yr Java) at NYC martech startup; AI-agent-first workflow, hybrid NYC 3x/week, $95\u2013125K band. Java backend rather than his React/TypeScript/Python stack, but a genuine associate band and live verified posting.",
+      "added_by": "manual borderline review 2026-09-24"
     }
   ]
 }
