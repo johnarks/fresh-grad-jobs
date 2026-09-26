@@ -1,7 +1,7 @@
 {
-  "count": 11,
-  "verified": "Sep 25, 2026",
-  "window": "2026-09-20 to 2026-09-25",
+  "count": 13,
+  "verified": "Sep 26, 2026",
+  "window": "2026-09-21 to 2026-09-26",
   "jobs": [
     {
       "company": "Garner Health",
@@ -146,6 +146,36 @@
       "exp": "junior2",
       "fit": "Junior backend role (1\u20133 yrs, at least 1 yr Java) at NYC martech startup; AI-agent-first workflow, hybrid NYC 3x/week, $95\u2013125K band. Java backend rather than his React/TypeScript/Python stack, but a genuine associate band and live verified posting.",
       "added_by": "manual borderline review 2026-09-24"
+    },
+    {
+      "company": "Stripe",
+      "role": "Software Engineer, Early Career \u2014 Immediate Start",
+      "location": "San Francisco, Seattle, New York",
+      "url": "https://stripe.com/jobs/search?gh_jid=8212508",
+      "posting_url": "https://stripe.com/jobs/search?gh_jid=8212508",
+      "posted": "2026-09-25",
+      "posted_at": "2026-09-25T16:44:55-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 26, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-09-26",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Stripe",
+      "role": "Software Engineer, New Grad",
+      "location": "San Francisco, Seattle, New York",
+      "url": "https://stripe.com/jobs/search?gh_jid=8128744",
+      "posting_url": "https://stripe.com/jobs/search?gh_jid=8128744",
+      "posted": "2026-09-25",
+      "posted_at": "2026-09-25T16:44:54-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 26, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-09-26",
+      "fresh_via": "ats-date"
     }
   ]
 }
