@@ -1,5 +1,5 @@
 {
-  "count": 13,
+  "count": 14,
   "verified": "Sep 26, 2026",
   "window": "2026-09-21 to 2026-09-26",
   "jobs": [
@@ -176,6 +176,22 @@
       "fit": "",
       "first_seen": "2026-09-26",
       "fresh_via": "ats-date"
+    },
+    {
+      "company": "Garner Health",
+      "role": "Associate Software Engineer",
+      "location": "New York City, New York",
+      "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6174210004",
+      "posting_url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6174210004",
+      "posted": "2026-09-26",
+      "posted_at": "2026-09-26T00:00:00-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 26, 2026",
+      "exp": "entry",
+      "fit": "New-grad posting: Spring 2026 grads or Fall 2026/Spring 2027 expected; JS/React or Python/Node.js, PostgreSQL, AWS/Docker \u2014 matches his stack. NYC.",
+      "first_seen": "2026-09-26",
+      "fresh_via": "manual-review",
+      "added_by": "manual borderline review 2026-09-26 (jev yes/0.81, below auto threshold; description verified)"
     }
   ]
 }
