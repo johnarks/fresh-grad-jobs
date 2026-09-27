@@ -1,7 +1,7 @@
 {
-  "count": 14,
-  "verified": "Sep 26, 2026",
-  "window": "2026-09-21 to 2026-09-26",
+  "count": 12,
+  "verified": "Sep 27, 2026",
+  "window": "2026-09-22 to 2026-09-27",
   "jobs": [
     {
       "company": "Garner Health",
@@ -15,19 +15,6 @@
       "role": "Feed Integrations Associate",
       "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6112552004",
       "verified": "Sep 23, 2026"
-    },
-    {
-      "company": "FiscalNote",
-      "role": "Associate Software Engineer",
-      "location": "United States - Remote",
-      "url": "https://jobs.lever.co/fiscalnote/c76e748f-6e25-42cf-bf26-ebae44280ffd",
-      "posting_url": "https://jobs.lever.co/fiscalnote/c76e748f-6e25-42cf-bf26-ebae44280ffd",
-      "posted": "2026-09-21",
-      "posted_at": "2026-09-21T15:10:40.385-04:00",
-      "date_source": "lever createdAt",
-      "verified": "Sep 23, 2026",
-      "exp": "entry",
-      "fit": "Associate-level full-stack web role (frontend UX plus backend APIs and production servers) on the Fireside R&D team; fits a React/TypeScript plus Python web background."
     },
     {
       "company": "Authentic Insurance",
@@ -106,19 +93,6 @@
       "verified": "Sep 23, 2026",
       "exp": "entry",
       "fit": "New-grad role refreshed Sep 22 (also on the main board); US-remote eligible. Helios (managed cloud) team."
-    },
-    {
-      "company": "Domino Data Lab",
-      "role": "Forward Deployed Engineer - New Grad, 2027",
-      "location": "New York City, New York",
-      "url": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992530?gh_jid=7992530",
-      "posting_url": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992530?gh_jid=7992530",
-      "posted": "2026-09-21",
-      "posted_at": "2026-09-21T17:42:18-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 23, 2026",
-      "exp": "entry",
-      "fit": ""
     },
     {
       "company": "Domino Data Lab",
