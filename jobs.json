@@ -1,99 +1,8 @@
 {
-  "count": 12,
-  "verified": "Sep 27, 2026",
-  "window": "2026-09-22 to 2026-09-27",
+  "count": 6,
+  "verified": "Sep 28, 2026",
+  "window": "2026-09-23 to 2026-09-28",
   "jobs": [
-    {
-      "company": "Garner Health",
-      "date_source": "greenhouse updated_at",
-      "exp": "junior2",
-      "fit": "Technical data-integrations role (feed automation, data analysis, error-reporting, file transformation/mapping) matching his Python/SQL/data-analysis skills, 0 years of experience explicitly acceptable.",
-      "location": "Remote (HQ: New York, NY)",
-      "posted": "2026-09-22",
-      "posted_at": "2026-09-22T12:51:40-04:00",
-      "posting_url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6112552004",
-      "role": "Feed Integrations Associate",
-      "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6112552004",
-      "verified": "Sep 23, 2026"
-    },
-    {
-      "company": "Authentic Insurance",
-      "role": "New Grad Software Engineer",
-      "location": "New York, New York, United States",
-      "url": "https://job-boards.greenhouse.io/authenticinsurance/jobs/4114318009",
-      "posting_url": "https://job-boards.greenhouse.io/authenticinsurance/jobs/4114318009",
-      "posted": "2026-09-22",
-      "posted_at": "2026-09-22T10:20:36-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 23, 2026",
-      "exp": "entry",
-      "fit": "New-grad full-stack role building a React frontend and Python/FastAPI backend at a NYC insurtech; near-exact stack match (React, Python, FastAPI, PostgreSQL, AWS)."
-    },
-    {
-      "company": "DoorDash",
-      "role": "Software Engineer I, Entry-Level (Graduation Date: Fall 2026-Summer 2027) - US",
-      "location": "Los Angeles, CA; New York, NY; San Francisco, CA; Sunnyvale, CA; Seattle, WA",
-      "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
-      "posting_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
-      "posted": "2026-09-22",
-      "posted_at": "2026-09-22T17:13:29-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 23, 2026",
-      "exp": "entry",
-      "fit": "Targets 2027 grads (Fall 2026-Summer 2027 graduation dates); NYC is a listed location. Classic entry-level SWE I pipeline (Python/Java/Kotlin) \u2014 fits his backend and API background."
-    },
-    {
-      "company": "SingleStore",
-      "role": "Software Engineer-Engine-New Grad 2027",
-      "location": "United States",
-      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8205427",
-      "posting_url": "https://job-boards.greenhouse.io/singlestore/jobs/8205427",
-      "posted": "2026-09-22",
-      "posted_at": "2026-09-22T18:36:55-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 23, 2026",
-      "exp": "entry",
-      "fit": "Targets 2027 new grads; US-remote eligible. New-grad pipeline at a distributed-SQL database company."
-    },
-    {
-      "company": "SingleStore",
-      "role": "Software Engineer-Helios-New Grad 2027",
-      "location": "United States",
-      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8205389",
-      "posting_url": "https://job-boards.greenhouse.io/singlestore/jobs/8205389",
-      "posted": "2026-09-22",
-      "posted_at": "2026-09-22T18:37:49-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 23, 2026",
-      "exp": "entry",
-      "fit": "Targets 2027 new grads; US-remote eligible. Helios (managed cloud) team \u2014 closer to his cloud/API background."
-    },
-    {
-      "company": "SingleStore",
-      "role": "MIT-Software Engineer-New Grad |Engine|",
-      "location": "United States",
-      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8220863",
-      "posting_url": "https://job-boards.greenhouse.io/singlestore/jobs/8220863",
-      "posted": "2026-09-22",
-      "posted_at": "2026-09-22T18:38:45-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 23, 2026",
-      "exp": "entry",
-      "fit": "New-grad role refreshed Sep 22 (also on the main board); US-remote eligible. Database engine team."
-    },
-    {
-      "company": "SingleStore",
-      "role": "MIT-Software Engineer-New Grad |Helios|",
-      "location": "United States",
-      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8220882",
-      "posting_url": "https://job-boards.greenhouse.io/singlestore/jobs/8220882",
-      "posted": "2026-09-22",
-      "posted_at": "2026-09-22T18:39:44-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 23, 2026",
-      "exp": "entry",
-      "fit": "New-grad role refreshed Sep 22 (also on the main board); US-remote eligible. Helios (managed cloud) team."
-    },
     {
       "company": "Domino Data Lab",
       "role": "Software Engineer - New Grad, 2027",
@@ -166,6 +75,21 @@
       "first_seen": "2026-09-26",
       "fresh_via": "manual-review",
       "added_by": "manual borderline review 2026-09-26 (jev yes/0.81, below auto threshold; description verified)"
+    },
+    {
+      "company": "Domino Data Lab",
+      "role": "Forward Deployed Engineer - New Grad, 2027",
+      "location": "New York City, New York",
+      "url": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992530?gh_jid=7992530",
+      "posting_url": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992530?gh_jid=7992530",
+      "posted": "2026-09-23",
+      "posted_at": "2026-09-23T15:16:22-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 28, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-09-28",
+      "fresh_via": "ats-date"
     }
   ]
 }
