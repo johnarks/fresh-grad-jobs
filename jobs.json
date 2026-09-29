@@ -1,35 +1,8 @@
 {
-  "count": 6,
-  "verified": "Sep 28, 2026",
-  "window": "2026-09-23 to 2026-09-28",
+  "count": 7,
+  "verified": "Sep 29, 2026",
+  "window": "2026-09-24 to 2026-09-29",
   "jobs": [
-    {
-      "company": "Domino Data Lab",
-      "role": "Software Engineer - New Grad, 2027",
-      "location": "New York City, New York",
-      "url": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992556?gh_jid=7992556",
-      "posting_url": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992556?gh_jid=7992556",
-      "posted": "2026-09-23",
-      "posted_at": "2026-09-23T15:22:26-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 23, 2026",
-      "exp": "entry",
-      "fit": ""
-    },
-    {
-      "company": "Eulerity",
-      "role": "Associate Backend Engineer",
-      "location": "New York, New York",
-      "url": "https://job-boards.greenhouse.io/eulerity/jobs/4709039006",
-      "posting_url": "https://job-boards.greenhouse.io/eulerity/jobs/4709039006",
-      "posted": "2026-09-23",
-      "posted_at": "2026-09-23T16:28:56-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 24, 2026",
-      "exp": "junior2",
-      "fit": "Junior backend role (1\u20133 yrs, at least 1 yr Java) at NYC martech startup; AI-agent-first workflow, hybrid NYC 3x/week, $95\u2013125K band. Java backend rather than his React/TypeScript/Python stack, but a genuine associate band and live verified posting.",
-      "added_by": "manual borderline review 2026-09-24"
-    },
     {
       "company": "Stripe",
       "role": "Software Engineer, Early Career \u2014 Immediate Start",
@@ -89,6 +62,51 @@
       "exp": "entry",
       "fit": "",
       "first_seen": "2026-09-28",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Authentic Insurance",
+      "role": "New Grad Software Engineer",
+      "location": "New York, New York, United States",
+      "url": "https://job-boards.greenhouse.io/authenticinsurance/jobs/4114318009",
+      "posting_url": "https://job-boards.greenhouse.io/authenticinsurance/jobs/4114318009",
+      "posted": "2026-09-28",
+      "posted_at": "2026-09-28T09:34:57-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 29, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-09-29",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "DoorDash",
+      "role": "Software Engineer I, Entry-Level (Graduation Date: Fall 2026-Summer 2027) - US",
+      "location": "Los Angeles, CA; New York, NY; San Francisco, CA; Sunnyvale, CA; Seattle, WA",
+      "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
+      "posting_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
+      "posted": "2026-09-28",
+      "posted_at": "2026-09-28T10:02:49-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 29, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-09-29",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "SingleStore",
+      "role": "MIT-Software Engineer-New Grad |Helios|",
+      "location": "United States",
+      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8220882",
+      "posting_url": "https://job-boards.greenhouse.io/singlestore/jobs/8220882",
+      "posted": "2026-09-25",
+      "posted_at": "2026-09-25T13:35:38-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 29, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-09-29",
       "fresh_via": "ats-date"
     }
   ]
