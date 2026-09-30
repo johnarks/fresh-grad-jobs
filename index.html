@@ -156,6 +156,7 @@
     <option value="NY" selected>New York</option>
     <option value="NJ">New Jersey</option>
     <option value="CT">Connecticut</option>
+    <option value="PA">Pennsylvania</option>
   </select>
   <select id="city" title="Filter by city">
     <option value="">All cities</option>
@@ -179,7 +180,7 @@ const q = document.getElementById('q'), stateSel = document.getElementById('stat
 let workType = 'all';
 
 const CITY_ALIAS = { 'NYC':'New York City', 'New York':'New York City', 'SF':'San Francisco', 'LA':'Los Angeles' };
-const TRISTATE = new Set(['NY','NJ','CT']);
+const TRISTATE = new Set(['NY','NJ','CT','PA']);
 const TAB_LABELS = { all:'All fresh roles', entry:'🎓 Entry-level (0–1 yr)', junior2:'📈 Up to 2 yrs experience' };
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
@@ -212,7 +213,7 @@ function parseLoc(loc){
     states.add(st);
     if (TRISTATE.has(st)) cities.add(city);
   }
-  for (const [name, abbr] of [['New York','NY'],['New Jersey','NJ'],['Connecticut','CT']]){
+  for (const [name, abbr] of [['New York','NY'],['New Jersey','NJ'],['Connecticut','CT'],['Pennsylvania','PA']]){
     if (new RegExp('\\b'+name+'\\b','i').test(loc)) states.add(abbr);
   }
   if (/\bNYC\b/.test(loc)){ states.add('NY'); cities.add('New York City'); }
