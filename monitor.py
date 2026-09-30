@@ -6,7 +6,7 @@
 - A posting is FRESH if its ATS timestamp is within the last 5 days, OR if it
   was never seen on any previous scan (first-sighting backstop — catches
   postings with bad/missing ATS dates; the seen record lives in seen.json)
-- Keeps entry-level/junior titles, NYC tri-state or remote-US locations
+- Keeps entry-level/junior titles, NY/NJ/CT/PA or remote-US locations
 - Live-verifies each posting URL (HTTP 200) before adding
 - Prunes entries older than 5 days by ATS date AND by first-sighting date
 - Pushes updated jobs.json to the fresh-grad-jobs GitHub repo (Vercel redeploys)
@@ -34,10 +34,11 @@ TITLE_BORDERLINE = re.compile(
     r"(associate|engineer\s+ii\b|\bii\b|forward.?deployed|founding|"
     r"0\s*[-–]\s*2|1\s*[-–]\s*2|2\s*(yr|year))", re.I)
 TITLE_TECH = re.compile(r"(engineer|developer|software|swe\b|sde\b)", re.I)
-LOC_NY = re.compile(
+LOC_NY = re.compile(  # acceptable geography: NY/NJ/CT/PA + remote/US markers
     r"(new york|nyc\b|manhattan|brooklyn|queens|bronx|staten island|\bny\b|"
     r"jersey city|hoboken|newark|princeton|morristown|"
     r"stamford|greenwich|hartford|white plains|long island|"
+    r"philadelphia|pittsburgh|pennsylvania|\bpa\b|"
     r"remote|anywhere|united states|\bus\b|work from home|hybrid)", re.I)
 # Non-US geography: reject unless a strong US marker is also present
 # (e.g. "Remote Poland" is out; "London/New York" stays).
@@ -49,6 +50,7 @@ LOC_NONUS = re.compile(
     r"israel|tel aviv|warsaw|krakow|emea\b|apac\b|latam\b|europe)", re.I)
 LOC_US_STRONG = re.compile(
     r"(new york|nyc\b|\bny\b|new jersey|\bnj\b|connecticut|\bct\b|"
+    r"pennsylvania|\bpa\b|"
     r"united states|\busa?\b|u\.s\.|los angeles|san francisco|boston|"
     r"chicago|seattle|austin|denver|atlanta|washington)", re.I)
 
@@ -59,7 +61,7 @@ def loc_ok(loc):
         return False
     if LOC_NONUS.search(loc) and not LOC_US_STRONG.search(loc):
         return False
-    # A specific non-tri-state city with only a generic "United States"
+    # A specific non-covered-region city with only a generic "United States"
     # suffix is out (e.g. "O Fallon, United States of America"); bare
     # "United States" or a remote/hybrid marker stays in.
     if re.search(r"remote|hybrid|work from home|anywhere", loc, re.I):
@@ -413,7 +415,7 @@ def jev_adjudicate(company, role, location, posted, date_source):
             "state": (
                 "Candidate: May 2026 CS graduate (Hunter College, CUNY), based in NYC, "
                 "seeking entry-level/new-grad software engineering roles (0-2 years), "
-                "NYC tri-state or remote-US. "
+                "NY/NJ/CT/PA or remote-US. "
                 f"Posting under review: '{role}' at {company}, {location or 'location not listed'}, "
                 f"posted {posted} (date source: {date_source})."
             ),
