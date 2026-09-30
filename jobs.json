@@ -1,5 +1,5 @@
 {
-  "count": 8,
+  "count": 9,
   "verified": "Sep 30, 2026",
   "window": "2026-09-25 to 2026-09-30",
   "jobs": [
@@ -123,6 +123,22 @@
       "fit": "borderline-review (Jev: yes/0.32; JD requires 1-2 yrs, tri-state)",
       "first_seen": "2026-09-29",
       "fresh_via": "ats-date"
+    },
+    {
+      "company": "Celonis",
+      "role": "Associate Deployment Engineer - Galaxy Graduate Program",
+      "location": "New York, US, New York",
+      "url": "https://job-boards.greenhouse.io/celonis/jobs/7627681003?gh_jid=7627681003",
+      "posting_url": "https://job-boards.greenhouse.io/celonis/jobs/7627681003?gh_jid=7627681003",
+      "posted": "2026-09-29",
+      "posted_at": "2026-09-29T11:39:20-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Sep 30, 2026",
+      "exp": "entry",
+      "fit": "Galaxy graduate program for recent grads: 0-2 yrs exp, SQL/Python/ML workbench, platform deployments for customers. NYC ($83-90k).",
+      "first_seen": "2026-09-30",
+      "fresh_via": "manual-review",
+      "added_by": "manual borderline review 2026-09-30 (jev no/0.69, below auto threshold; description verified: 0-2 yrs, NYC)"
     }
   ]
 }
