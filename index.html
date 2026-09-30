@@ -136,7 +136,7 @@
   <p>Entry-level and junior (≤2 yrs) software roles for 2026 CS graduates — every listing here was <b>posted or updated within the last 5 days</b> and date-confirmed from the employer's own hiring system. Click <b>📄 Job posting</b> to read the full description before you apply.</p>
   <div class="meta">
     <div class="pill"><b id="count">–</b> verified fresh roles</div>
-    <div class="pill">Window: <b>Sep 18 – Sep 23, 2026</b></div>
+    <div class="pill">Window: <b id="window">–</b></div>
     <div class="pill"><span class="ok">✓</span> dates confirmed from ATS timestamps</div>
   </div>
   <div class="how">
@@ -257,6 +257,16 @@ function render(){
   });
   list.sort((a,b) => sort.value==='company' ? a.company.localeCompare(b.company) : (b.posted_at||'').localeCompare(a.posted_at||''));
   document.getElementById('count').textContent = list.length;
+  // Dynamic 5-day window label (matches the monitor's WINDOW_DAYS), so it never goes stale.
+  (function(){
+    const fmt = d => d.toLocaleDateString('en-US', {month:'short', day:'numeric'});
+    const now = new Date(), start = new Date(now);
+    start.setDate(now.getDate() - 5);
+    const w = document.getElementById('window');
+    w.textContent = start.getFullYear() === now.getFullYear()
+      ? fmt(start) + ' – ' + fmt(now) + ', ' + now.getFullYear()
+      : fmt(start) + ', ' + start.getFullYear() + ' – ' + fmt(now) + ', ' + now.getFullYear();
+  })();
   document.getElementById('tabname').innerHTML = 'Viewing: <b>' + TAB_LABELS[tab] + '</b>';
   grid.innerHTML = list.length ? '' : '<div class="empty">No fresh roles match your filters.</div>';
   for (const j of list){
