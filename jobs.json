@@ -1,7 +1,7 @@
 {
-  "count": 9,
-  "verified": "Sep 30, 2026",
-  "window": "2026-09-25 to 2026-09-30",
+  "count": 10,
+  "verified": "Oct 01, 2026",
+  "window": "2026-09-26 to 2026-10-01",
   "jobs": [
     {
       "company": "Stripe",
@@ -139,6 +139,21 @@
       "first_seen": "2026-09-30",
       "fresh_via": "manual-review",
       "added_by": "manual borderline review 2026-09-30 (jev no/0.69, below auto threshold; description verified: 0-2 yrs, NYC)"
+    },
+    {
+      "company": "Breeze",
+      "role": "Full Stack Engineer - Junior",
+      "location": "New York City, NY",
+      "url": "https://job-boards.greenhouse.io/breezecash/jobs/5412768008",
+      "posting_url": "https://job-boards.greenhouse.io/breezecash/jobs/5412768008",
+      "posted": "2026-09-30",
+      "posted_at": "2026-09-30T16:53:53-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 01, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-01",
+      "fresh_via": "ats-date"
     }
   ]
 }
