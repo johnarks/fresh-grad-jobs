@@ -1,5 +1,5 @@
 {
-  "count": 10,
+  "count": 11,
   "verified": "Oct 02, 2026",
   "window": "2026-09-27 to 2026-10-02",
   "jobs": [
@@ -151,6 +151,21 @@
       "verified": "Oct 02, 2026",
       "exp": "entry",
       "fit": "",
+      "first_seen": "2026-10-02",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Eulerity",
+      "role": "Associate Backend Engineer",
+      "location": "New York, New York",
+      "url": "https://job-boards.greenhouse.io/eulerity/jobs/4718113006",
+      "posting_url": "https://job-boards.greenhouse.io/eulerity/jobs/4718113006",
+      "posted": "2026-09-30",
+      "posted_at": "2026-09-30T16:13:27-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 02, 2026",
+      "exp": "entry",
+      "fit": "manual-review",
       "first_seen": "2026-10-02",
       "fresh_via": "ats-date"
     }
