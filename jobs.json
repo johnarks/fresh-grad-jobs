@@ -1,23 +1,8 @@
 {
-  "count": 11,
-  "verified": "Oct 03, 2026",
-  "window": "2026-09-28 to 2026-10-03",
+  "count": 10,
+  "verified": "Oct 04, 2026",
+  "window": "2026-09-29 to 2026-10-04",
   "jobs": [
-    {
-      "company": "Domino Data Lab",
-      "role": "Forward Deployed Engineer - New Grad, 2027",
-      "location": "New York City, New York",
-      "url": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992530?gh_jid=7992530",
-      "posting_url": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992530?gh_jid=7992530",
-      "posted": "2026-09-23",
-      "posted_at": "2026-09-23T15:16:22-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 28, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-09-28",
-      "fresh_via": "ats-date"
-    },
     {
       "company": "Authentic Insurance",
       "role": "New Grad Software Engineer",
