@@ -1,21 +1,21 @@
 {
-  "count": 6,
+  "count": 7,
   "verified": "Oct 06, 2026",
   "window": "2026-10-01 to 2026-10-06",
   "jobs": [
     {
-      "company": "Breeze",
-      "role": "Full Stack Engineer - Junior",
-      "location": "New York City, NY",
-      "url": "https://job-boards.greenhouse.io/breezecash/jobs/5412768008",
-      "posting_url": "https://job-boards.greenhouse.io/breezecash/jobs/5412768008",
-      "posted": "2026-09-30",
-      "posted_at": "2026-09-30T16:53:53-04:00",
+      "company": "DoorDash",
+      "role": "Software Engineer I, Entry-Level (Graduation Date: Fall 2026-Summer 2027) - US",
+      "location": "Los Angeles, CA; New York, NY; San Francisco, CA; Sunnyvale, CA; Seattle, WA",
+      "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
+      "posting_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
+      "posted": "2026-10-05",
+      "posted_at": "2026-10-05T08:33:08-04:00",
       "date_source": "greenhouse updated_at",
-      "verified": "Oct 01, 2026",
+      "verified": "Oct 06, 2026",
       "exp": "entry",
       "fit": "",
-      "first_seen": "2026-10-01",
+      "first_seen": "2026-10-06",
       "fresh_via": "ats-date"
     },
     {
@@ -64,6 +64,36 @@
       "fresh_via": "ats-date"
     },
     {
+      "company": "Morgan Stanley",
+      "role": "Associate, Software Engineer",
+      "location": "New York, New York, United States of America",
+      "url": "https://morganstanley.eightfold.ai/careers/job/549800007925",
+      "posting_url": "https://morganstanley.eightfold.ai/careers/job/549800007925",
+      "posted": "2026-10-01",
+      "posted_at": "2026-10-01T00:00:00+00:00",
+      "date_source": "eightfold postedTs",
+      "verified": "Oct 06, 2026",
+      "exp": "junior2",
+      "fit": "manual-review",
+      "first_seen": "2026-10-06",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Breeze",
+      "role": "Full Stack Engineer - Junior",
+      "location": "New York City, NY",
+      "url": "https://job-boards.greenhouse.io/breezecash/jobs/5412768008",
+      "posting_url": "https://job-boards.greenhouse.io/breezecash/jobs/5412768008",
+      "posted": "2026-09-30",
+      "posted_at": "2026-09-30T16:53:53-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 01, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-01",
+      "fresh_via": "ats-date"
+    },
+    {
       "company": "Eulerity",
       "role": "Associate Backend Engineer",
       "location": "New York, New York",
@@ -76,21 +106,6 @@
       "exp": "entry",
       "fit": "manual-review",
       "first_seen": "2026-10-02",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "DoorDash",
-      "role": "Software Engineer I, Entry-Level (Graduation Date: Fall 2026-Summer 2027) - US",
-      "location": "Los Angeles, CA; New York, NY; San Francisco, CA; Sunnyvale, CA; Seattle, WA",
-      "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
-      "posting_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
-      "posted": "2026-10-05",
-      "posted_at": "2026-10-05T08:33:08-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 06, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-06",
       "fresh_via": "ats-date"
     }
   ]
