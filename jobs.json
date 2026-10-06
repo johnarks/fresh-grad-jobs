@@ -1,24 +1,8 @@
 {
   "count": 6,
-  "verified": "Oct 05, 2026",
-  "window": "2026-09-30 to 2026-10-05",
+  "verified": "Oct 06, 2026",
+  "window": "2026-10-01 to 2026-10-06",
   "jobs": [
-    {
-      "company": "Celonis",
-      "role": "Associate Deployment Engineer - Galaxy Graduate Program",
-      "location": "New York, US, New York",
-      "url": "https://job-boards.greenhouse.io/celonis/jobs/7627681003?gh_jid=7627681003",
-      "posting_url": "https://job-boards.greenhouse.io/celonis/jobs/7627681003?gh_jid=7627681003",
-      "posted": "2026-09-29",
-      "posted_at": "2026-09-29T11:39:20-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Sep 30, 2026",
-      "exp": "entry",
-      "fit": "Galaxy graduate program for recent grads: 0-2 yrs exp, SQL/Python/ML workbench, platform deployments for customers. NYC ($83-90k).",
-      "first_seen": "2026-09-30",
-      "fresh_via": "manual-review",
-      "added_by": "manual borderline review 2026-09-30 (jev no/0.69, below auto threshold; description verified: 0-2 yrs, NYC)"
-    },
     {
       "company": "Breeze",
       "role": "Full Stack Engineer - Junior",
@@ -92,6 +76,21 @@
       "exp": "entry",
       "fit": "manual-review",
       "first_seen": "2026-10-02",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "DoorDash",
+      "role": "Software Engineer I, Entry-Level (Graduation Date: Fall 2026-Summer 2027) - US",
+      "location": "Los Angeles, CA; New York, NY; San Francisco, CA; Sunnyvale, CA; Seattle, WA",
+      "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
+      "posting_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
+      "posted": "2026-10-05",
+      "posted_at": "2026-10-05T08:33:08-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 06, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-06",
       "fresh_via": "ats-date"
     }
   ]
