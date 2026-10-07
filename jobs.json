@@ -1,7 +1,7 @@
 {
   "count": 7,
-  "verified": "Oct 06, 2026",
-  "window": "2026-10-01 to 2026-10-06",
+  "verified": "Oct 07, 2026",
+  "window": "2026-10-02 to 2026-10-07",
   "jobs": [
     {
       "company": "DoorDash",
@@ -79,21 +79,6 @@
       "fresh_via": "ats-date"
     },
     {
-      "company": "Breeze",
-      "role": "Full Stack Engineer - Junior",
-      "location": "New York City, NY",
-      "url": "https://job-boards.greenhouse.io/breezecash/jobs/5412768008",
-      "posting_url": "https://job-boards.greenhouse.io/breezecash/jobs/5412768008",
-      "posted": "2026-09-30",
-      "posted_at": "2026-09-30T16:53:53-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 01, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-01",
-      "fresh_via": "ats-date"
-    },
-    {
       "company": "Eulerity",
       "role": "Associate Backend Engineer",
       "location": "New York, New York",
@@ -106,6 +91,21 @@
       "exp": "entry",
       "fit": "manual-review",
       "first_seen": "2026-10-02",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Affirm",
+      "role": "Software Engineer, Early Career (NYC)",
+      "location": "New York, New York, United States",
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/8008649003",
+      "posting_url": "https://job-boards.greenhouse.io/affirm/jobs/8008649003",
+      "posted": "2026-10-06",
+      "posted_at": "2026-10-06T19:17:31-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 07, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-07",
       "fresh_via": "ats-date"
     }
   ]
