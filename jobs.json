@@ -1,7 +1,7 @@
 {
-  "count": 7,
-  "verified": "Oct 07, 2026",
-  "window": "2026-10-02 to 2026-10-07",
+  "count": 5,
+  "verified": "Oct 08, 2026",
+  "window": "2026-10-03 to 2026-10-08",
   "jobs": [
     {
       "company": "DoorDash",
@@ -16,51 +16,6 @@
       "exp": "entry",
       "fit": "",
       "first_seen": "2026-10-06",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Pinterest",
-      "role": "Master's University Grad Machine Learning Engineer 2027 (USA)",
-      "location": "San Francisco, CA, US; Palo Alto, CA, US; Seattle, WA, US; New York, NY, US",
-      "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8140219",
-      "posting_url": "https://www.pinterestcareers.com/jobs/?gh_jid=8140219",
-      "posted": "2026-10-01",
-      "posted_at": "2026-10-01T14:10:23-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 02, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-02",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Pinterest",
-      "role": "PhD University Grad Machine Learning Engineer (USA)",
-      "location": "San Francisco, CA, US; Palo Alto, CA, US; Seattle, WA, US",
-      "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8140363",
-      "posting_url": "https://www.pinterestcareers.com/jobs/?gh_jid=8140363",
-      "posted": "2026-10-01",
-      "posted_at": "2026-10-01T13:21:35-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 02, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-02",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Pinterest",
-      "role": "University Grad Software Engineer 2027 (USA)",
-      "location": "San Francisco, CA, US; Remote, US",
-      "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7838591",
-      "posting_url": "https://www.pinterestcareers.com/jobs/?gh_jid=7838591",
-      "posted": "2026-10-01",
-      "posted_at": "2026-10-01T13:06:41-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 02, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-02",
       "fresh_via": "ats-date"
     },
     {
@@ -79,21 +34,6 @@
       "fresh_via": "ats-date"
     },
     {
-      "company": "Eulerity",
-      "role": "Associate Backend Engineer",
-      "location": "New York, New York",
-      "url": "https://job-boards.greenhouse.io/eulerity/jobs/4718113006",
-      "posting_url": "https://job-boards.greenhouse.io/eulerity/jobs/4718113006",
-      "posted": "2026-09-30",
-      "posted_at": "2026-09-30T16:13:27-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 02, 2026",
-      "exp": "entry",
-      "fit": "manual-review",
-      "first_seen": "2026-10-02",
-      "fresh_via": "ats-date"
-    },
-    {
       "company": "Affirm",
       "role": "Software Engineer, Early Career (NYC)",
       "location": "New York, New York, United States",
@@ -106,6 +46,36 @@
       "exp": "entry",
       "fit": "",
       "first_seen": "2026-10-07",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Stripe",
+      "role": "Software Engineer, Early Career \u2014 Immediate Start",
+      "location": "San Francisco, Seattle, New York",
+      "url": "https://stripe.com/jobs/search?gh_jid=8212508",
+      "posting_url": "https://stripe.com/jobs/search?gh_jid=8212508",
+      "posted": "2026-10-07",
+      "posted_at": "2026-10-07T19:02:27-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 08, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-08",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Stripe",
+      "role": "Software Engineer, New Grad",
+      "location": "San Francisco, Seattle, New York",
+      "url": "https://stripe.com/jobs/search?gh_jid=8128744",
+      "posting_url": "https://stripe.com/jobs/search?gh_jid=8128744",
+      "posted": "2026-10-07",
+      "posted_at": "2026-10-07T19:02:27-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 08, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-08",
       "fresh_via": "ats-date"
     }
   ]
