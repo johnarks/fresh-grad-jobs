@@ -73,32 +73,68 @@ def loc_ok(loc):
             return False
     return True
 
+# Statuses worth one more try: rate limits, transient WAF blocks (Workday
+# served 406s to all 16 tenants on 2026-10-10, Lever served 429s the same
+# morning; both recovered within the hour), and server errors.
+RETRYABLE = {0, 406, 408, 425, 426, 429, 500, 502, 503, 504}
+RETRY_SLEEPS = (3, 8)  # seconds between attempts (max 3 attempts)
+
+def _do_request(make_req, timeout):
+    code = 0
+    for attempt in range(1 + len(RETRY_SLEEPS)):
+        try:
+            with urlopen(make_req(), timeout=timeout) as r:
+                return r.status, r.read().decode("utf-8", "replace")
+        except HTTPError as e:
+            code = e.code
+            if e.code not in RETRYABLE:
+                return e.code, ""
+        except (URLError, TimeoutError, Exception):
+            code = 0
+        if attempt < len(RETRY_SLEEPS):
+            time.sleep(RETRY_SLEEPS[attempt])
+    return code, ""
+
 def fetch(url, timeout=20):
-    req = Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
-    try:
-        with urlopen(req, timeout=timeout) as r:
-            return r.status, r.read().decode("utf-8", "replace")
-    except HTTPError as e:
-        return e.code, ""
-    except (URLError, TimeoutError, Exception):
-        return 0, ""
+    def make_req():
+        return Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+    return _do_request(make_req, timeout)
 
 def fetch_post(url, payload, timeout=25):
-    req = Request(url, data=json.dumps(payload).encode(),
-                  headers={"User-Agent": UA, "Content-Type": "application/json",
-                           "Accept": "application/json"})
-    try:
-        with urlopen(req, timeout=timeout) as r:
-            return r.status, r.read().decode("utf-8", "replace")
-    except HTTPError as e:
-        return e.code, ""
-    except (URLError, TimeoutError, Exception):
-        return 0, ""
+    def make_req():
+        return Request(url, data=json.dumps(payload).encode(),
+                       headers={"User-Agent": UA, "Content-Type": "application/json",
+                                "Accept": "application/json"})
+    return _do_request(make_req, timeout)
+
+# Companies whose board fetch/parse failed this run (vs boards that fetched
+# fine but simply have zero jobs, which are healthy-but-empty).
+FETCH_PROBLEMS = set()
+
+def _board_problem(entry):
+    FETCH_PROBLEMS.add(entry["company"])
 
 def parse_ts(s):
-    if not s:
+    """Parse an ATS timestamp. Handles ISO strings (greenhouse/ashby/workable/
+    smartrecruiters/phenom) and epoch seconds/milliseconds (Lever createdAt)."""
+    if s is None or s == "":
         return None
+    if isinstance(s, bool):
+        return None
+    if isinstance(s, (int, float)):
+        v = float(s)
+        if v > 1e13:      # microseconds
+            v /= 1e6
+        elif v > 1e10:    # milliseconds (Lever createdAt)
+            v /= 1e3
+        try:
+            return datetime.fromtimestamp(v, tz=timezone.utc)
+        except Exception:
+            return None
     try:
+        s = str(s).strip()
+        if s.isdigit():
+            return parse_ts(int(s))
         ts = s.replace("Z", "+00:00")
         dt = datetime.fromisoformat(ts)
         if dt.tzinfo is None:
@@ -138,10 +174,12 @@ def workday_jobs(entry, now, cutoff_date):
                                 {"appliedFacets": {}, "limit": 20,
                                  "offset": offset, "searchText": ""})
         if code != 200 or not body:
+            _board_problem(entry)
             return
         try:
             data = json.loads(body)
         except Exception:
+            _board_problem(entry)
             return
         postings = data.get("jobPostings") or []
         if not postings:
@@ -167,6 +205,7 @@ def workday_jobs(entry, now, cutoff_date):
         if fresh_on_page == 0:
             return
         offset += 20
+        time.sleep(1.5)  # don't hammer the tenant: WAF 406-blocks rapid paging
 
 def phenom_jobs(entry):
     """Phenom People: POST {origin}/widgets with refineSearch; one shot."""
@@ -176,10 +215,12 @@ def phenom_jobs(entry):
                             {"ddoKey": "refineSearch", "from": 0,
                              "size": 2000, "jobs": True, "counts": True})
     if code != 200 or not body:
+        _board_problem(entry)
         return
     try:
         data = json.loads(body)
     except Exception:
+        _board_problem(entry)
         return
     jobs = ((data.get("refineSearch") or {}).get("data") or {}).get("jobs") or []
     for j in jobs:
@@ -203,10 +244,12 @@ def eightfold_jobs(entry, cutoff):
     for _ in range(60):
         code, body = fetch(f"{base}&start={start}&num=10")
         if code != 200 or not body:
+            _board_problem(entry)
             return
         try:
             data = json.loads(body)
         except Exception:
+            _board_problem(entry)
             return
         data = data.get("data", data)
         positions = data.get("positions") or []
@@ -241,10 +284,12 @@ def workable_jobs(entry):
     slug = entry["board_token"]
     code, body = fetch(f"https://apply.workable.com/api/v1/widget/accounts/{slug}")
     if code != 200 or not body:
+        _board_problem(entry)
         return
     try:
         data = json.loads(body)
     except Exception:
+        _board_problem(entry)
         return
     for j in data.get("jobs") or []:
         try:
@@ -271,10 +316,12 @@ def smartrecruiters_jobs(entry, cutoff):
                f"?limit=100&offset={offset}&releasedAfter={cutoff_iso}")
         code, body = fetch(url)
         if code != 200 or not body:
+            _board_problem(entry)
             return
         try:
             data = json.loads(body)
         except Exception:
+            _board_problem(entry)
             return
         content = data.get("content") or []
         total = data.get("totalFound") or 0
@@ -328,13 +375,16 @@ def board_jobs(entry, now=None, cutoff=None):
         return
     code, body = fetch(url)
     if code != 200 or not body:
+        _board_problem(entry)
         return
     try:
         data = json.loads(body)
     except Exception:
+        _board_problem(entry)
         return
     jobs = data.get("jobs") if isinstance(data, dict) else data
     if not isinstance(jobs, list):
+        _board_problem(entry)
         return
     for j in jobs:
         try:
@@ -452,10 +502,8 @@ def main():
                               datetime.min.time(), tzinfo=timezone.utc)
     today = now.strftime("%b %d, %Y")
     today_iso = now.strftime("%Y-%m-%d")
-    cutoff_str = (now - timedelta(days=WINDOW_DAYS)).strftime("%Y-%m-%d")
 
     # Seen record: url -> {first_seen, last_seen, company, role}.
-    # First run builds it silently (no first-sighting promotions while seeding).
     try:
         seen = json.load(open(SEEN_FILE))
         if not isinstance(seen, dict):
@@ -471,7 +519,7 @@ def main():
                     re.sub(r"\s+", " ", j["role"].lower()).strip())
                    for j in board["jobs"]}
     kept, added, borderline = [], [], []
-    scanned, boards_ok, boards_fail = 0, 0, []
+    scanned, boards_ok, boards_fail, boards_empty = 0, 0, [], []
 
     for entry in wl:
         scanned += 1
@@ -497,12 +545,14 @@ def main():
                               "company": co, "role": title}
             else:
                 seen[link]["last_seen"] = today_iso
-            # Fresh = ATS date within window, OR never seen before
-            # (first-sighting backstop for bad/missing ATS dates).
-            via_first_sight = first_sighting and not seeding
-            fresh_via = "ats-date" if ts >= cutoff else ("first-seen" if via_first_sight else None)
-            if not fresh_via:
+            # Fresh = ATS date within the 5-day window, nothing else.
+            # (A first-sighting backstop was removed 2026-10-11: every adapter
+            # yields a real parsed ATS timestamp, so the backstop could only
+            # ever promote genuinely stale postings, e.g. 2021-2025-dated
+            # Palantir roles. seen.json remains as a sighting audit trail.)
+            if ts < cutoff:
                 continue
+            fresh_via = "ats-date"
             if cls == "borderline":
                 choice, conf = jev_adjudicate(co, title, loc, ts.strftime("%Y-%m-%d"), src)
                 b = {"company": co, "role": title, "location": loc,
@@ -545,16 +595,16 @@ def main():
                     seen_titles.add(key)
         if got:
             boards_ok += 1
-        else:
+        elif co in FETCH_PROBLEMS:
             boards_fail.append(co)
+        else:
+            boards_empty.append(co)  # board healthy, zero jobs right now
         time.sleep(0.4)  # be polite to public APIs
 
-    # prune anything now older than the window — by ATS date AND by first sighting
-    # (a first-seen discovery stays visible for 5 days from discovery)
+    # prune anything now older than the window, by ATS date only
     for j in board["jobs"]:
         ts = parse_ts(j.get("posted_at"))
-        fs = j.get("first_seen") or ""
-        if (ts and ts >= cutoff) or (fs and fs >= cutoff_str):
+        if ts and ts >= cutoff:
             kept.append(j)
 
     board["jobs"] = kept + added
@@ -581,7 +631,8 @@ def main():
     commit = json.loads(p.stdout).get("commit", {}).get("sha", "?")[:8]
 
     report = {"run": now.isoformat(), "boards_scanned": scanned, "boards_ok": boards_ok,
-              "boards_failed": boards_fail, "added": added,
+              "boards_failed": boards_fail, "boards_empty": boards_empty,
+              "added": added,
               "added_via_first_seen": sum(1 for a in added if a.get("fresh_via") == "first-seen"),
               "borderline_for_review": borderline, "pruned_to": len(board["jobs"]),
               "seen_tracked": len(seen), "seeding_run": seeding,
@@ -590,7 +641,8 @@ def main():
     os.makedirs(REPORT_DIR, exist_ok=True)
     json.dump(report, open(f"{REPORT_DIR}/{now.strftime('%Y-%m-%d-%H%M')}.json", "w"), indent=2)
 
-    print(f"boards: {boards_ok}/{scanned} ok | added: {len(added)} | "
+    print(f"boards: {boards_ok}/{scanned} ok | failed: {len(boards_fail)} | "
+          f"empty: {len(boards_empty)} | added: {len(added)} | "
           f"borderline: {len(borderline)} | total live: {len(board['jobs'])} | "
           f"seen: {len(seen)}{' (seeding)' if seeding else ''} | commit {commit}")
     for a in added:
