@@ -347,6 +347,20 @@ def smartrecruiters_jobs(entry, cutoff):
         if offset >= total or not content:
             return
 
+def ashby_loc(j):
+    """Location string for an Ashby posting. locationName is often null;
+    fall back to address.postalAddress, and note remote workplace types."""
+    loc = (j.get("locationName") or "").strip()
+    if not loc:
+        pa = ((j.get("address") or {}).get("postalAddress") or {})
+        parts = [pa.get("addressLocality"), pa.get("addressRegion"),
+                 pa.get("addressCountry")]
+        loc = ", ".join(p for p in parts if p)
+    wt = (j.get("workplaceType") or "").strip().lower()
+    if "remote" in wt and "remote" not in loc.lower():
+        loc = (loc + ", Remote") if loc else "Remote"
+    return loc
+
 def board_jobs(entry, now=None, cutoff=None):
     """Yield (title, location, url, posted_dt, date_source) from a watchlist entry."""
     ats, token = entry["ats"], entry["board_token"]
@@ -396,7 +410,7 @@ def board_jobs(entry, now=None, cutoff=None):
                 src = "greenhouse updated_at"
             elif ats == "ashby":
                 title = j.get("title", "")
-                loc = j.get("locationName", "") or ""
+                loc = ashby_loc(j)
                 link = j.get("jobUrl", "")
                 ts = parse_ts(j.get("publishedAt")) or parse_ts(j.get("updatedAt"))
                 src = "ashby publishedAt"
