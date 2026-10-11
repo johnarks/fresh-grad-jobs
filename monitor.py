@@ -3,12 +3,12 @@
 
 - Reads ~/workspace/newgrad-jobs/ats-watchlist.json
 - For each board, pulls the public ATS API job list
-- A posting is FRESH if its ATS timestamp is within the last 5 days, OR if it
-  was never seen on any previous scan (first-sighting backstop — catches
-  postings with bad/missing ATS dates; the seen record lives in seen.json)
+- A posting is FRESH if its ATS timestamp is within the last WINDOW_DAYS days
+  (ATS-date-only; a first-sighting backstop was removed 2026-10-11 after it
+  promoted stale-dated postings. seen.json remains as a sighting audit trail.)
 - Keeps entry-level/junior titles, NY/NJ/CT/PA or remote-US locations
 - Live-verifies each posting URL (HTTP 200) before adding
-- Prunes entries older than 5 days by ATS date AND by first-sighting date
+- Prunes entries older than WINDOW_DAYS by ATS date
 - Pushes updated jobs.json to the fresh-grad-jobs GitHub repo (Vercel redeploys)
 - Writes a run report + borderline review queue (Jev-adjudicated)
 """
@@ -22,7 +22,7 @@ WATCHLIST = f"{HOME}/workspace/newgrad-jobs/ats-watchlist.json"
 JOBS_FILE = f"{HOME}/workspace/fresh-grad-jobs/jobs.json"
 SEEN_FILE = f"{HOME}/workspace/fresh-grad-jobs/seen.json"
 REPORT_DIR = f"{HOME}/workspace/newgrad-jobs/monitor-reports"
-WINDOW_DAYS = 5
+WINDOW_DAYS = 30
 UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15"
 GH_API = f"{HOME}/workspace/skills/github/bin/gh-api"
 
@@ -511,7 +511,7 @@ JEV_PROMOTE_CONFIDENCE = 0.95  # auto-add borderline only at very high confidenc
 
 def main():
     now = datetime.now(timezone.utc)
-    # calendar-day window: anything posted since (today - 5 days) 00:00 UTC stays
+    # calendar-day window: anything posted since (today - WINDOW_DAYS) 00:00 UTC stays
     cutoff = datetime.combine((now - timedelta(days=WINDOW_DAYS)).date(),
                               datetime.min.time(), tzinfo=timezone.utc)
     today = now.strftime("%b %d, %Y")
@@ -559,7 +559,7 @@ def main():
                               "company": co, "role": title}
             else:
                 seen[link]["last_seen"] = today_iso
-            # Fresh = ATS date within the 5-day window, nothing else.
+            # Fresh = ATS date within the window, nothing else.
             # (A first-sighting backstop was removed 2026-10-11: every adapter
             # yields a real parsed ATS timestamp, so the backstop could only
             # ever promote genuinely stale postings, e.g. 2021-2025-dated
@@ -638,7 +638,7 @@ def main():
         capture_output=True, text=True).stdout)["sha"]
     content = open(JOBS_FILE, "rb").read()
     import base64
-    body = json.dumps({"message": f"Monitor: +{len(added)} fresh, pruned to {len(kept+added)} (5-day window)",
+    body = json.dumps({"message": f"Monitor: +{len(added)} fresh, pruned to {len(kept+added)} (30-day window)",
                        "content": base64.b64encode(content).decode(), "sha": sha})
     p = subprocess.run([GH_API, "PUT", "/repos/johnarks/fresh-grad-jobs/contents/jobs.json", body],
                        capture_output=True, text=True)
