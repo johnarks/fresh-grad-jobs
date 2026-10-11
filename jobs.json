@@ -1,5 +1,5 @@
 {
- "count": 5,
+ "count": 6,
  "verified": "Oct 11, 2026",
  "window": "2026-10-06 to 2026-10-11",
  "jobs": [
@@ -76,6 +76,21 @@
    "exp": "entry",
    "fit": "",
    "first_seen": "2026-10-08",
+   "fresh_via": "ats-date"
+  },
+  {
+   "company": "LangChain",
+   "role": "Deployed Engineer (Early Career-NYC)",
+   "location": "New York, New York, United States",
+   "url": "https://jobs.ashbyhq.com/langchain/dfbba971-a7e2-4feb-a0d9-8e38a1155134",
+   "posting_url": "https://jobs.ashbyhq.com/langchain/dfbba971-a7e2-4feb-a0d9-8e38a1155134",
+   "posted": "2026-10-07",
+   "posted_at": "2026-10-07T19:53:53.433000+00:00",
+   "date_source": "ashby publishedAt",
+   "verified": "Oct 11, 2026",
+   "exp": "entry",
+   "fit": "manual-recovery",
+   "first_seen": "2026-10-11",
    "fresh_via": "ats-date"
   }
  ]
