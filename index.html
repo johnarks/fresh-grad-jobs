@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fresh Grad Jobs — Posted in the Last 5 Days</title>
+<title>Fresh Grad Jobs — Posted in the Last 30 Days</title>
 <style>
   :root { --bg:#0e1116; --card:#171c24; --border:#262d38; --text:#e8ecf1; --muted:#9aa4b2; --accent:#4da3ff; --green:#3ddc84; --amber:#ffb454; }
   * { box-sizing:border-box; margin:0; padding:0; }
@@ -127,15 +127,15 @@
     <button data-tab="entry"><span>🎓 Entry-level <small style="color:var(--muted)">(0–1 yr)</small></span><span class="n" id="n-entry">–</span></button>
     <button data-tab="junior2"><span>📈 Up to 2 yrs experience</span><span class="n" id="n-junior2">–</span></button>
   </nav>
-  <div class="dfoot">Only roles posted/updated in the last 5 days, with the date confirmed from the employer's hiring-system timestamp.</div>
+  <div class="dfoot">Only roles posted/updated in the last 30 days, with the date confirmed from the employer's hiring-system timestamp.</div>
 </aside>
 
 <header>
   <div class="topbar">
     <button id="menu-btn" aria-label="Open menu">☰</button>
-    <h1>🆕 Fresh Grad Jobs <span>— last 5 days</span></h1>
+    <h1>🆕 Fresh Grad Jobs <span>— last 30 days</span></h1>
   </div>
-  <p>Entry-level and junior (≤2 yrs) software roles for 2026 CS graduates — every listing here was <b>posted or updated within the last 5 days</b> and date-confirmed from the employer's own hiring system. Click <b>📄 Job posting</b> to read the full description before you apply.</p>
+  <p>Entry-level and junior (≤2 yrs) software roles for 2026 CS graduates — every listing here was <b>posted or updated within the last 30 days</b> and date-confirmed from the employer's own hiring system. Click <b>📄 Job posting</b> to read the full description before you apply.</p>
   <div class="meta">
     <div class="pill"><b id="count">–</b> verified fresh roles</div>
     <div class="pill">Window: <b id="window">–</b></div>
@@ -155,7 +155,7 @@
   </div>
   <select id="state" title="Filter by state">
     <option value="">All states</option>
-    <option value="NY" selected>New York</option>
+    <option value="NY">New York</option>
     <option value="NJ">New Jersey</option>
     <option value="CT">Connecticut</option>
     <option value="PA">Pennsylvania</option>
@@ -260,11 +260,11 @@ function render(){
   });
   list.sort((a,b) => sort.value==='company' ? a.company.localeCompare(b.company) : (b.posted_at||'').localeCompare(a.posted_at||''));
   document.getElementById('count').textContent = list.length;
-  // Dynamic 5-day window label (matches the monitor's WINDOW_DAYS), so it never goes stale.
+  // Dynamic 30-day window label (matches the monitor's WINDOW_DAYS), so it never goes stale.
   (function(){
     const fmt = d => d.toLocaleDateString('en-US', {month:'short', day:'numeric'});
     const now = new Date(), start = new Date(now);
-    start.setDate(now.getDate() - 5);
+    start.setDate(now.getDate() - 30);
     const w = document.getElementById('window');
     w.textContent = start.getFullYear() === now.getFullYear()
       ? fmt(start) + ' – ' + fmt(now) + ', ' + now.getFullYear()
