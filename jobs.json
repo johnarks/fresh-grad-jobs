@@ -1,5 +1,5 @@
 {
-  "count": 25,
+  "count": 23,
   "verified": "Oct 12, 2026",
   "window": "2026-09-12 to 2026-10-12",
   "jobs": [
@@ -334,47 +334,17 @@
       "fresh_via": "ats-date"
     },
     {
-      "company": "Elastic",
-      "role": "Principal Software Engineer I - CI/CD - Platform Engineering Productivity",
-      "location": "United States",
-      "url": "https://jobs.elastic.co/jobs?gh_jid=8240105&gh_jid=8240105",
-      "posting_url": "https://jobs.elastic.co/jobs?gh_jid=8240105&gh_jid=8240105",
-      "posted": "2026-10-09",
-      "posted_at": "2026-10-09T17:35:46-04:00",
+      "company": "Eulerity",
+      "role": "Associate Backend Engineer",
+      "location": "New York, New York",
+      "url": "https://job-boards.greenhouse.io/eulerity/jobs/4718113006",
+      "posting_url": "https://job-boards.greenhouse.io/eulerity/jobs/4718113006",
+      "posted": "2026-09-30",
+      "posted_at": "2026-09-30T16:13:27-04:00",
       "date_source": "greenhouse updated_at",
       "verified": "Oct 12, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-12",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Elastic",
-      "role": "Principal Software Engineer I - Platform Billing Core",
-      "location": "United States",
-      "url": "https://jobs.elastic.co/jobs?gh_jid=8245817&gh_jid=8245817",
-      "posting_url": "https://jobs.elastic.co/jobs?gh_jid=8245817&gh_jid=8245817",
-      "posted": "2026-10-02",
-      "posted_at": "2026-10-02T00:59:41-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 12, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-12",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Elastic",
-      "role": "Principal Software Engineer I - Serverless - Platform Control Plane",
-      "location": "United States",
-      "url": "https://jobs.elastic.co/jobs?gh_jid=8130119&gh_jid=8130119",
-      "posting_url": "https://jobs.elastic.co/jobs?gh_jid=8130119&gh_jid=8130119",
-      "posted": "2026-10-01",
-      "posted_at": "2026-10-01T12:57:36-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 12, 2026",
-      "exp": "entry",
-      "fit": "",
+      "exp": "junior2",
+      "fit": "associate-level (manual review)",
       "first_seen": "2026-10-12",
       "fresh_via": "ats-date"
     }
