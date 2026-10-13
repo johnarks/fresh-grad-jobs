@@ -1,5 +1,5 @@
 {
-  "count": 23,
+  "count": 24,
   "verified": "Oct 13, 2026",
   "window": "2026-09-13 to 2026-10-13",
   "jobs": [
@@ -346,6 +346,21 @@
       "exp": "junior2",
       "fit": "associate-level (manual review)",
       "first_seen": "2026-10-12",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "iCapital",
+      "role": "Python Engineer and Developer - Associate",
+      "location": "Stamford, Connecticut, United States",
+      "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8733129002",
+      "posting_url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8733129002",
+      "posted": "2026-09-28",
+      "posted_at": "2026-09-28T10:33:38-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 13, 2026",
+      "exp": "junior2",
+      "fit": "",
+      "first_seen": "2026-10-13",
       "fresh_via": "ats-date"
     }
   ]
