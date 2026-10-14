@@ -1,5 +1,5 @@
 {
-  "count": 27,
+  "count": 28,
   "verified": "Oct 14, 2026",
   "window": "2026-09-14 to 2026-10-14",
   "jobs": [
@@ -405,6 +405,21 @@
       "verified": "Oct 14, 2026",
       "exp": "entry",
       "fit": "",
+      "first_seen": "2026-10-14",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Justworks",
+      "role": "Associate Software Engineer, Frontend",
+      "location": "New York, New York",
+      "url": "https://boards.greenhouse.io/justworks/jobs/8236815?gh_jid=8236815",
+      "posting_url": "https://boards.greenhouse.io/justworks/jobs/8236815?gh_jid=8236815",
+      "posted": "2026-10-13",
+      "posted_at": "2026-10-13T14:47:59-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 14, 2026",
+      "exp": "entry",
+      "fit": "manual-review",
       "first_seen": "2026-10-14",
       "fresh_via": "ats-date"
     }
