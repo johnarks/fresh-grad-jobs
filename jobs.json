@@ -1,7 +1,7 @@
 {
-  "count": 28,
-  "verified": "Oct 14, 2026",
-  "window": "2026-09-14 to 2026-10-14",
+  "count": 26,
+  "verified": "Oct 15, 2026",
+  "window": "2026-09-15 to 2026-10-15",
   "jobs": [
     {
       "company": "DoorDash",
@@ -146,36 +146,6 @@
       "posting_url": "https://app.careerpuck.com/job-board/domino-data-lab/job/7992556?gh_jid=7992556",
       "posted": "2026-09-23",
       "posted_at": "2026-09-23T15:22:26-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 11, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-11",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Miter",
-      "role": "Software Engineer (New Grad)",
-      "location": "New York, New York, United States",
-      "url": "https://jobs.ashbyhq.com/miter/f4567649-a0eb-445d-bd00-a0673a26ec6d",
-      "posting_url": "https://jobs.ashbyhq.com/miter/f4567649-a0eb-445d-bd00-a0673a26ec6d",
-      "posted": "2026-09-14",
-      "posted_at": "2026-09-14T17:24:21.810000+00:00",
-      "date_source": "ashby publishedAt",
-      "verified": "Oct 11, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-11",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Oscar Health",
-      "role": "Analytics Engineer I",
-      "location": "New York, New York, United States",
-      "url": "https://job-boards.greenhouse.io/oscar/jobs/7914958",
-      "posting_url": "https://job-boards.greenhouse.io/oscar/jobs/7914958",
-      "posted": "2026-09-14",
-      "posted_at": "2026-09-14T07:21:18-04:00",
       "date_source": "greenhouse updated_at",
       "verified": "Oct 11, 2026",
       "exp": "entry",
