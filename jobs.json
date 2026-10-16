@@ -1,5 +1,5 @@
 {
-  "count": 30,
+  "count": 31,
   "verified": "Oct 16, 2026",
   "window": "2026-09-16 to 2026-10-16",
   "jobs": [
@@ -452,6 +452,21 @@
       "fit": "",
       "first_seen": "2026-10-16",
       "fresh_via": "ats-date"
+    },
+    {
+      "company": "Celonis",
+      "role": "Associate Deployment Engineer - Galaxy Graduate Program",
+      "location": "New York, NY",
+      "url": "https://job-boards.greenhouse.io/celonis/jobs/7627681003?gh_jid=7627681003",
+      "posting_url": "https://job-boards.greenhouse.io/celonis/jobs/7627681003?gh_jid=7627681003",
+      "posted": "2026-09-30",
+      "posted_at": "2026-09-30T08:39:15-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 16, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-16",
+      "fresh_via": "manual-borderline"
     }
   ]
 }
