@@ -1,5 +1,5 @@
 {
-  "count": 31,
+  "count": 33,
   "verified": "Oct 20, 2026",
   "window": "2026-09-20 to 2026-10-20",
   "jobs": [
@@ -467,6 +467,36 @@
       "fit": "",
       "first_seen": "2026-10-16",
       "fresh_via": "manual-borderline"
+    },
+    {
+      "company": "Andrew Morgan",
+      "role": "Data Engineer I",
+      "location": "Remote",
+      "url": "https://andrew-morgan.com/current-openings/?gh_jid=5457414008",
+      "posting_url": "https://andrew-morgan.com/current-openings/?gh_jid=5457414008",
+      "posted": "2026-10-19",
+      "posted_at": "2026-10-19T15:28:52-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 20, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-20",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Palantir",
+      "role": "Software Engineer, New Grad - Query Engines",
+      "location": "New York, NY",
+      "url": "https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac",
+      "posting_url": "https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac",
+      "posted": "2026-10-19",
+      "posted_at": "2026-10-19T23:45:22.249000+00:00",
+      "date_source": "lever createdAt",
+      "verified": "Oct 20, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-20",
+      "fresh_via": "ats-date"
     }
   ]
 }
