@@ -1,7 +1,7 @@
 {
-  "count": 33,
-  "verified": "Oct 21, 2026",
-  "window": "2026-09-21 to 2026-10-21",
+  "count": 32,
+  "verified": "Oct 22, 2026",
+  "window": "2026-09-22 to 2026-10-22",
   "jobs": [
     {
       "company": "DoorDash",
@@ -267,21 +267,6 @@
       "posted": "2026-09-26",
       "posted_at": "2026-09-26T01:01:07-04:00",
       "date_source": "greenhouse updated_at",
-      "verified": "Oct 11, 2026",
-      "exp": "junior2",
-      "fit": "associate-level (manual review)",
-      "first_seen": "2026-10-11",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "BlackRock",
-      "role": "Associate, Software Engineer - Aladdin Graph",
-      "location": "New York, NY",
-      "url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional/job/New-York-NY/Associate--Software-Engineer---Aladdin-Graph_R266598",
-      "posting_url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional/job/New-York-NY/Associate--Software-Engineer---Aladdin-Graph_R266598",
-      "posted": "2026-09-21",
-      "posted_at": "2026-09-21T12:00:00+00:00",
-      "date_source": "workday postedOn",
       "verified": "Oct 11, 2026",
       "exp": "junior2",
       "fit": "associate-level (manual review)",
