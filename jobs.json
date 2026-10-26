@@ -1,7 +1,7 @@
 {
-  "count": 27,
-  "verified": "Oct 25, 2026",
-  "window": "2026-09-25 to 2026-10-25",
+  "count": 25,
+  "verified": "Oct 26, 2026",
+  "window": "2026-09-26 to 2026-10-26",
   "jobs": [
     {
       "company": "DoorDash",
@@ -124,21 +124,6 @@
       "fresh_via": "ats-date"
     },
     {
-      "company": "SingleStore",
-      "role": "MIT-Software Engineer-New Grad |Helios|",
-      "location": "United States",
-      "url": "https://job-boards.greenhouse.io/singlestore/jobs/8220882",
-      "posting_url": "https://job-boards.greenhouse.io/singlestore/jobs/8220882",
-      "posted": "2026-09-25",
-      "posted_at": "2026-09-25T13:35:38-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 11, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-11",
-      "fresh_via": "ats-date"
-    },
-    {
       "company": "Harvey",
       "role": "Software Engineer, New Grad (2027)",
       "location": "New York, New York, USA",
@@ -146,21 +131,6 @@
       "posting_url": "https://jobs.ashbyhq.com/harvey/4d8dc9ba-eb86-4d88-af7d-65d2fdaf3fdc",
       "posted": "2026-10-02",
       "posted_at": "2026-10-02T19:13:48.998000+00:00",
-      "date_source": "ashby publishedAt",
-      "verified": "Oct 11, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-11",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Aescape",
-      "role": "Junior Electrical & Firmware Engineer",
-      "location": "New York, New York, United States",
-      "url": "https://jobs.ashbyhq.com/aescape/5ab3f804-c547-40e3-b496-53f1d3b5048e",
-      "posting_url": "https://jobs.ashbyhq.com/aescape/5ab3f804-c547-40e3-b496-53f1d3b5048e",
-      "posted": "2026-09-25",
-      "posted_at": "2026-09-25T23:22:38.801000+00:00",
       "date_source": "ashby publishedAt",
       "verified": "Oct 11, 2026",
       "exp": "entry",
