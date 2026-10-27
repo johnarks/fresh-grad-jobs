@@ -1,7 +1,7 @@
 {
-  "count": 25,
-  "verified": "Oct 26, 2026",
-  "window": "2026-09-26 to 2026-10-26",
+  "count": 26,
+  "verified": "Oct 27, 2026",
+  "window": "2026-09-27 to 2026-10-27",
   "jobs": [
     {
       "company": "DoorDash",
@@ -135,21 +135,6 @@
       "verified": "Oct 11, 2026",
       "exp": "entry",
       "fit": "",
-      "first_seen": "2026-10-11",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Garner Health",
-      "role": "Associate Software Engineer",
-      "location": "New York City, New York",
-      "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6174210004",
-      "posting_url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6174210004",
-      "posted": "2026-09-26",
-      "posted_at": "2026-09-26T01:01:07-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 11, 2026",
-      "exp": "junior2",
-      "fit": "associate-level (manual review)",
       "first_seen": "2026-10-11",
       "fresh_via": "ats-date"
     },
@@ -376,6 +361,36 @@
       "exp": "entry",
       "fit": "",
       "first_seen": "2026-10-23",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Aquatic Capital Management",
+      "role": "Software Engineer, Early Career",
+      "location": "Chicago; New York",
+      "url": "https://job-boards.greenhouse.io/aquaticcapitalmanagement/jobs/8489226002",
+      "posting_url": "https://job-boards.greenhouse.io/aquaticcapitalmanagement/jobs/8489226002",
+      "posted": "2026-10-26",
+      "posted_at": "2026-10-26T14:01:00-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 27, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-27",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Oscar Health",
+      "role": "Operations Engineer I",
+      "location": "New York, New York, United States",
+      "url": "https://job-boards.greenhouse.io/oscar/jobs/8301410",
+      "posting_url": "https://job-boards.greenhouse.io/oscar/jobs/8301410",
+      "posted": "2026-10-26",
+      "posted_at": "2026-10-26T14:15:46-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 27, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-27",
       "fresh_via": "ats-date"
     }
   ]
