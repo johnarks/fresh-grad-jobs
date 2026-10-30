@@ -1,7 +1,7 @@
 {
-  "count": 24,
-  "verified": "Oct 29, 2026",
-  "window": "2026-09-29 to 2026-10-29",
+  "count": 25,
+  "verified": "Oct 30, 2026",
+  "window": "2026-09-30 to 2026-10-30",
   "jobs": [
     {
       "company": "DoorDash",
@@ -361,6 +361,21 @@
       "exp": "entry",
       "fit": "",
       "first_seen": "2026-10-27",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Authentic Insurance",
+      "role": "New Grad Software Engineer",
+      "location": "New York, New York, United States",
+      "url": "https://job-boards.greenhouse.io/authenticinsurance/jobs/4114318009",
+      "posting_url": "https://job-boards.greenhouse.io/authenticinsurance/jobs/4114318009",
+      "posted": "2026-10-28",
+      "posted_at": "2026-10-28T13:50:12-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 30, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-10-30",
       "fresh_via": "ats-date"
     }
   ]
