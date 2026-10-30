@@ -1,5 +1,5 @@
 {
-  "count": 25,
+  "count": 26,
   "verified": "Oct 30, 2026",
   "window": "2026-09-30 to 2026-10-30",
   "jobs": [
@@ -375,6 +375,21 @@
       "verified": "Oct 30, 2026",
       "exp": "entry",
       "fit": "",
+      "first_seen": "2026-10-30",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "iCapital",
+      "role": "Python Engineer and Developer - Associate",
+      "location": "Stamford, Connecticut, United States",
+      "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8733129002",
+      "posting_url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8733129002",
+      "posted": "2026-10-28",
+      "posted_at": "2026-10-28T16:39:51-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Oct 30, 2026",
+      "exp": "junior2",
+      "fit": "manual-review",
       "first_seen": "2026-10-30",
       "fresh_via": "ats-date"
     }
