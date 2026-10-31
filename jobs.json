@@ -1,7 +1,7 @@
 {
-  "count": 26,
-  "verified": "Oct 30, 2026",
-  "window": "2026-09-30 to 2026-10-30",
+  "count": 23,
+  "verified": "Oct 31, 2026",
+  "window": "2026-10-01 to 2026-10-31",
   "jobs": [
     {
       "company": "DoorDash",
@@ -94,21 +94,6 @@
       "fresh_via": "ats-date"
     },
     {
-      "company": "Breeze",
-      "role": "Full Stack Engineer - Junior",
-      "location": "New York City, NY",
-      "url": "https://job-boards.greenhouse.io/breezecash/jobs/5412768008",
-      "posting_url": "https://job-boards.greenhouse.io/breezecash/jobs/5412768008",
-      "posted": "2026-09-30",
-      "posted_at": "2026-09-30T16:53:53-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 11, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-11",
-      "fresh_via": "ats-date"
-    },
-    {
       "company": "Harvey",
       "role": "Software Engineer, New Grad (2027)",
       "location": "New York, New York, USA",
@@ -135,21 +120,6 @@
       "verified": "Oct 12, 2026",
       "exp": "entry",
       "fit": "",
-      "first_seen": "2026-10-12",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Eulerity",
-      "role": "Associate Backend Engineer",
-      "location": "New York, New York",
-      "url": "https://job-boards.greenhouse.io/eulerity/jobs/4718113006",
-      "posting_url": "https://job-boards.greenhouse.io/eulerity/jobs/4718113006",
-      "posted": "2026-09-30",
-      "posted_at": "2026-09-30T16:13:27-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 12, 2026",
-      "exp": "junior2",
-      "fit": "associate-level (manual review)",
       "first_seen": "2026-10-12",
       "fresh_via": "ats-date"
     },
@@ -272,21 +242,6 @@
       "fit": "",
       "first_seen": "2026-10-16",
       "fresh_via": "ats-date"
-    },
-    {
-      "company": "Celonis",
-      "role": "Associate Deployment Engineer - Galaxy Graduate Program",
-      "location": "New York, NY",
-      "url": "https://job-boards.greenhouse.io/celonis/jobs/7627681003?gh_jid=7627681003",
-      "posting_url": "https://job-boards.greenhouse.io/celonis/jobs/7627681003?gh_jid=7627681003",
-      "posted": "2026-09-30",
-      "posted_at": "2026-09-30T08:39:15-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 16, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-16",
-      "fresh_via": "manual-borderline"
     },
     {
       "company": "Andrew Morgan",
