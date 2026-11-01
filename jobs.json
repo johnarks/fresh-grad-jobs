@@ -1,7 +1,7 @@
 {
-  "count": 23,
-  "verified": "Oct 31, 2026",
-  "window": "2026-10-01 to 2026-10-31",
+  "count": 22,
+  "verified": "Nov 01, 2026",
+  "window": "2026-10-02 to 2026-11-01",
   "jobs": [
     {
       "company": "DoorDash",
@@ -15,21 +15,6 @@
       "verified": "Oct 06, 2026",
       "exp": "entry",
       "fit": "",
-      "first_seen": "2026-10-06",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Morgan Stanley",
-      "role": "Associate, Software Engineer",
-      "location": "New York, New York, United States of America",
-      "url": "https://morganstanley.eightfold.ai/careers/job/549800007925",
-      "posting_url": "https://morganstanley.eightfold.ai/careers/job/549800007925",
-      "posted": "2026-10-01",
-      "posted_at": "2026-10-01T00:00:00+00:00",
-      "date_source": "eightfold postedTs",
-      "verified": "Oct 06, 2026",
-      "exp": "junior2",
-      "fit": "manual-review",
       "first_seen": "2026-10-06",
       "fresh_via": "ats-date"
     },
