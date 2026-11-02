@@ -1,7 +1,7 @@
 {
-  "count": 22,
-  "verified": "Nov 01, 2026",
-  "window": "2026-10-02 to 2026-11-01",
+  "count": 18,
+  "verified": "Nov 02, 2026",
+  "window": "2026-10-03 to 2026-11-02",
   "jobs": [
     {
       "company": "DoorDash",
@@ -79,21 +79,6 @@
       "fresh_via": "ats-date"
     },
     {
-      "company": "Harvey",
-      "role": "Software Engineer, New Grad (2027)",
-      "location": "New York, New York, USA",
-      "url": "https://jobs.ashbyhq.com/harvey/4d8dc9ba-eb86-4d88-af7d-65d2fdaf3fdc",
-      "posting_url": "https://jobs.ashbyhq.com/harvey/4d8dc9ba-eb86-4d88-af7d-65d2fdaf3fdc",
-      "posted": "2026-10-02",
-      "posted_at": "2026-10-02T19:13:48.998000+00:00",
-      "date_source": "ashby publishedAt",
-      "verified": "Oct 11, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-11",
-      "fresh_via": "ats-date"
-    },
-    {
       "company": "LangChain",
       "role": "Deployed Engineer (Early Career- SF)",
       "location": "United States",
@@ -106,51 +91,6 @@
       "exp": "entry",
       "fit": "",
       "first_seen": "2026-10-12",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Pinterest",
-      "role": "Master's University Grad Machine Learning Engineer 2027 (USA)",
-      "location": "San Francisco, CA, US; Palo Alto, CA, US; Seattle, WA, US; New York, NY, US",
-      "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8140219",
-      "posting_url": "https://www.pinterestcareers.com/jobs/?gh_jid=8140219",
-      "posted": "2026-10-02",
-      "posted_at": "2026-10-02T10:25:53-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 14, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-14",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Pinterest",
-      "role": "PhD University Grad Machine Learning Engineer (USA)",
-      "location": "San Francisco, CA, US; Palo Alto, CA, US; Seattle, WA, US",
-      "url": "https://www.pinterestcareers.com/jobs/?gh_jid=8140363",
-      "posting_url": "https://www.pinterestcareers.com/jobs/?gh_jid=8140363",
-      "posted": "2026-10-02",
-      "posted_at": "2026-10-02T10:25:53-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 14, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-14",
-      "fresh_via": "ats-date"
-    },
-    {
-      "company": "Pinterest",
-      "role": "University Grad Software Engineer 2027 (USA)",
-      "location": "San Francisco, CA, US; Remote, US",
-      "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7838591",
-      "posting_url": "https://www.pinterestcareers.com/jobs/?gh_jid=7838591",
-      "posted": "2026-10-02",
-      "posted_at": "2026-10-02T10:25:17-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 14, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-14",
       "fresh_via": "ats-date"
     },
     {
