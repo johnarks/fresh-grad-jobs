@@ -457,8 +457,10 @@ def classify(title):
     if not TITLE_TECH.search(title):
         return None
     if TITLE_AUTO.search(title):
-        # "Senior Software Engineer I" style bands are not entry-level
-        if re.search(r"senior", title, re.I):
+        # "Senior Software Engineer I" style bands are not entry-level.
+        # Same for Principal/Staff/Lead/Distinguished bands (e.g. Elastic's
+        # "Principal Software Engineer I", a senior IC track).
+        if re.search(r"senior|\bsr\.?\b|principal|staff|\blead\b|distinguished", title, re.I):
             return "borderline"
         return "entry"
     if TITLE_BORDERLINE.search(title):
