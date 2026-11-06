@@ -1,23 +1,8 @@
 {
-  "count": 21,
-  "verified": "Nov 05, 2026",
-  "window": "2026-10-06 to 2026-11-05",
+  "count": 22,
+  "verified": "Nov 06, 2026",
+  "window": "2026-10-07 to 2026-11-06",
   "jobs": [
-    {
-      "company": "Affirm",
-      "role": "Software Engineer, Early Career (NYC)",
-      "location": "New York, New York, United States",
-      "url": "https://job-boards.greenhouse.io/affirm/jobs/8008649003",
-      "posting_url": "https://job-boards.greenhouse.io/affirm/jobs/8008649003",
-      "posted": "2026-10-06",
-      "posted_at": "2026-10-06T19:17:31-04:00",
-      "date_source": "greenhouse updated_at",
-      "verified": "Oct 07, 2026",
-      "exp": "entry",
-      "fit": "",
-      "first_seen": "2026-10-07",
-      "fresh_via": "ats-date"
-    },
     {
       "company": "Stripe",
       "role": "Software Engineer, Early Career \u2014 Immediate Start",
@@ -316,6 +301,36 @@
       "exp": "entry",
       "fit": "",
       "first_seen": "2026-11-05",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "DoorDash",
+      "role": "Software Engineer I, Entry-Level (Graduation Date: Fall 2026-Summer 2027) - US",
+      "location": "Los Angeles, CA; New York, NY; San Francisco, CA; Sunnyvale, CA; Seattle, WA",
+      "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
+      "posting_url": "https://job-boards.greenhouse.io/doordashusa/jobs/8163709",
+      "posted": "2026-11-04",
+      "posted_at": "2026-11-04T16:15:15-05:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Nov 06, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-11-06",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "StubHub",
+      "role": "Software Engineer I (New Grad) - Consumer Experience",
+      "location": "New York, New York, United States",
+      "url": "https://job-boards.eu.greenhouse.io/stubhubinc/jobs/5027626101",
+      "posting_url": "https://job-boards.eu.greenhouse.io/stubhubinc/jobs/5027626101",
+      "posted": "2026-11-05",
+      "posted_at": "2026-11-05T12:56:06-05:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Nov 06, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-11-06",
       "fresh_via": "ats-date"
     }
   ]
