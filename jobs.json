@@ -1,7 +1,7 @@
 {
-  "count": 21,
-  "verified": "Nov 07, 2026",
-  "window": "2026-10-08 to 2026-11-07",
+  "count": 23,
+  "verified": "Nov 08, 2026",
+  "window": "2026-10-09 to 2026-11-08",
   "jobs": [
     {
       "company": "Justworks",
@@ -316,6 +316,36 @@
       "exp": "entry",
       "fit": "",
       "first_seen": "2026-11-07",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Stripe",
+      "role": "Software Engineer, Early Career \u2014 Immediate Start",
+      "location": "San Francisco, Seattle, New York",
+      "url": "https://stripe.com/jobs/search?gh_jid=8212508",
+      "posting_url": "https://stripe.com/jobs/search?gh_jid=8212508",
+      "posted": "2026-10-29",
+      "posted_at": "2026-10-29T10:42:09-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Nov 08, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-11-08",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Stripe",
+      "role": "Software Engineer, New Grad",
+      "location": "San Francisco, Seattle, New York",
+      "url": "https://stripe.com/jobs/search?gh_jid=8128744",
+      "posting_url": "https://stripe.com/jobs/search?gh_jid=8128744",
+      "posted": "2026-10-29",
+      "posted_at": "2026-10-29T10:42:09-04:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Nov 08, 2026",
+      "exp": "entry",
+      "fit": "",
+      "first_seen": "2026-11-08",
       "fresh_via": "ats-date"
     }
   ]
