@@ -1,5 +1,5 @@
 {
-  "count": 23,
+  "count": 24,
   "verified": "Nov 11, 2026",
   "window": "2026-10-12 to 2026-11-11",
   "jobs": [
@@ -346,6 +346,21 @@
       "exp": "entry",
       "fit": "",
       "first_seen": "2026-11-08",
+      "fresh_via": "ats-date"
+    },
+    {
+      "company": "Garner Health",
+      "role": "Associate Software Engineer",
+      "location": "New York City, New York",
+      "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6174210004",
+      "posting_url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6174210004",
+      "posted": "2026-11-10",
+      "posted_at": "2026-11-10T09:24:25-05:00",
+      "date_source": "greenhouse updated_at",
+      "verified": "Nov 11, 2026",
+      "exp": "entry",
+      "fit": "manual-review",
+      "first_seen": "2026-11-11",
       "fresh_via": "ats-date"
     }
   ]
